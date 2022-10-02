@@ -11,4 +11,5 @@
 		echo $numero . "\n";
 		$numero = $numero - 2;
 	}
+	echo "FIN";
 ?>
