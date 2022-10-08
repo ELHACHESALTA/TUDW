@@ -11,6 +11,5 @@
             $vocales = $vocales + 1;
         }
     } while ($letra <> "-");
-    echo "\n";
     echo "Cant. de vocales: " . $vocales;
 ?>
