@@ -25,5 +25,5 @@
         echo "El porcentaje de multiplos es: " . $porcentaje . "%";
     } else {
         echo "No se ingresaron nros en la secuencia";
-    }  
+    }
 ?>

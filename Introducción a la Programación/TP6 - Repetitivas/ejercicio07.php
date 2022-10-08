@@ -7,7 +7,7 @@
     echo "Nro maximo: ";
     $num2 = trim(fgets(STDIN));
     $suma = 0;
-    for ($i = $num1; $i < $num2; $i++) {
+    for ($i = $num1 + 1; $i < $num2; $i++) {
         if ($i % 2 == 1) {
         $suma = $suma + $i;
         }
