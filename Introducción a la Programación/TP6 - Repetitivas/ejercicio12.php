@@ -5,11 +5,10 @@
     /* float $sumatoria */
     echo "Ingrese un numero entero: ";
     $numero = trim(fgets(STDIN));
-    $numero = $numero + 1;
     $numerador = 2;
     $denominador = 1;
     $sumatoria = 0;
-    for ($i = 1; $i < $numero; $i++) {
+    for ($i = 0; $i < $numero; $i++) {
         $sumatoria = $sumatoria + ($numerador / $denominador);
         $numerador = $numerador + $denominador;
         $denominador = $numerador - $denominador;

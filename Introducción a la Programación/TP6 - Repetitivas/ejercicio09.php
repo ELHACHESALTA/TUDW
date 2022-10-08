@@ -7,7 +7,7 @@
     $num = $num + 1;
     $factorial = 1;
     for ($i = 2; $i < $num; $i++) {
-        $factorial = $factorial * $i;
+    $factorial = $factorial * $i;
     }
     echo "El factorial es: " . $factorial;
 ?>

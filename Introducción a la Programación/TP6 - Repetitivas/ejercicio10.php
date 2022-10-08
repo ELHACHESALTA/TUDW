@@ -1,7 +1,7 @@
 <?php
     /* PROGRAMA Principal */
     /* Calcula y muestra la sumatoria de los primeros números naturales hasta el número ingresado. */
-    /* int $num, $i, $sumatoria */
+    /* int $num, $sumatoria, $i */
     echo "Ingrese un número natural: ";
     $num = trim(fgets(STDIN));
     $num = $num + 1;

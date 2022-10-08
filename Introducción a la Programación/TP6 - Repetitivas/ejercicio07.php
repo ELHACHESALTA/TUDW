@@ -9,7 +9,7 @@
     $suma = 0;
     for ($i = $num1; $i < $num2; $i++) {
         if ($i % 2 == 1) {
-            $suma = $suma + $i;
+        $suma = $suma + $i;
         }
     }
     echo "La suma es: " . $suma;
