@@ -1,6 +1,6 @@
 <?php
     /* PROGRAMA Principal */
-    /* Calcula y muestra diversas operaciones a partir de los datos de los alumnos ingresados */
+    /* Calcula y muestra el resultado de diversas operaciones a partir de los datos de los alumnos ingresados */
     /* int $anioNac, $cantAlumnos, $mayorEdad, $menorEdad, $edad */
     /* float $altura, $peso, $sumaPesos, $mayorAltura, $menorPeso, $promedio */
     /* string $respuesta */

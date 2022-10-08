@@ -78,11 +78,10 @@
 }
 
     /* PROGRAMA Principal */
-    /* Calcula y muestra diversas operaciones a partir del número ingresado */
+    /* Calcula y muestra el resultado de diversas operaciones a partir del número ingresado */
     /* int $opcion, $num, $inverso, $suma */
     /* string $mensaje */
     /* boolean $resultado */
-    $opcion = 0;
     do {
         echo "1- Número inverso" . "\n";
         echo "2- Suma de dígitos" . "\n";
@@ -96,7 +95,7 @@
             $inverso = numeroInverso($num);
             echo "El inverso es: " . $inverso . "\n";
         } elseif ($opcion == 2) {
-            echo "Ingrese un nro para sumar sus digitos: ";
+            echo "Ingrese un nro para sumar sus dígitos: ";
             $num = trim(fgets(STDIN));
             $suma = sumaDeDigitos($num);
             echo "La suma de los dígitos es: " . $suma . "\n";
