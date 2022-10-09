@@ -5,13 +5,13 @@
     * @return boolean
     */
     function esPar($numP) {
-	    /* boolean $resultado */
-		if ( ($numP % 2) == 0 ) {
-			$resultado = true;
-		} else {
-			$resultado = false;
-		}
-		return $resultado;
+        /* boolean $resultado */
+        if ( ($numP % 2) == 0 ) {
+            $resultado = true;
+        } else {
+            $resultado = false;
+        }
+        return $resultado;
     }
 
     /* PROGRAMA Principal */
@@ -20,9 +20,9 @@
     echo "Ingrese un número: ";
     $num = trim(fgets(STDIN));
     if (esPar($num) == true) {
-		$comprobacion = " es: par";
-	} else {
-		$comprobacion = " es: impar";
-	}
+        $comprobacion = " es: par";
+    } else {
+        $comprobacion = " es: impar";
+    }
     echo "El número " . $num . $comprobacion;
 ?>
