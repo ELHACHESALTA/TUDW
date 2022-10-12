@@ -1,72 +1,68 @@
 <?php
     /**
-    * Calcula el costo de un aviso clasificado a partir de la cantidad de líneas que lo componen
-    * @param int $cantLineasCosto
+    * Calcula el costo por cantidad de líneas de código escritas por programadores Senior
+    * @param float $cantProgSenior
+    * @param int $cantLineasSenior
     * @return float
     */
-    function costoClasificado($cantLineasCosto) {
-        /* float $costoC */
-        if (0 < $cantLineasCosto && $cantLineasCosto <= 3) {
-            $costoC = 150.00;
+    function costoTotalSenior($cantProgCostoSenior, $cantLineasCostoSenior) {
+        /* float $costoSenior */
+        if ($cantLineasCostoSenior <= 10000) {
+            $costoSenior = 155000.00 * $cantProgCostoSenior + 2.00 * $cantLineasCostoSenior;
+        } elseif (10000 < $cantLineasCostoSenior && $cantLineasCostoSenior <= 90000) {
+            $costoSenior = 155000.00 * $cantProgCostoSenior + 1.50 * $cantLineasCostoSenior;
+        } elseif (90000 < $cantLineasCostoSenior && $cantLineasCostoSenior <= 200000) {
+            $costoSenior = 155000.00 * $cantProgCostoSenior + 1.00 * $cantLineasCostoSenior;
         } else {
-            $costoC = 150.00 + ($cantLineasCosto - 3) * 25.00;
+            $costoSenior = 155000.00 * $cantProgCostoSenior + 0.75 * $cantLineasCostoSenior;
         }
-        return $costoC;
+        return $costoSenior;
     }
 
     /**
-    * Calcula el costo de un aviso publicidad a partir de la cantidad de letras que lo componen y su tipo de color
-    * @param int $cantLetrasCosto\
-    * @param string $tipoColorCosto
-    * @return float
+    * Calcula la cantidad de líneas por funcionalidad y tipo de tecnología
+    * @param int $cantFuncPorFunc
+    * @param string tipoFuncPorFunc
+    * @return int
     */
-    function costoPublicidad($cantLetrasCosto, $tipoColorCosto) {
-        /* float $costoP */
-        if ($cantLetrasCosto <= 300) {
-            $costoP = 556.50;
-        } elseif (300 < $cantLetrasCosto && $cantLetrasCosto <= 500) {
-            $costoP = 950.00;
+    function cantLineasPorFunc($cantFuncPorFunc, $tipoTecPorFunc) {
+        /* int $cantLineasFunc */
+        if ($tipoTecPorFunc == "desktop") {
+            $cantLineasFunc = $cantFuncPorFunc * 1000 + $cantFuncPorFunc * 50;
+        } elseif ($tipoTecPorFunc == "web") {
+            $cantLineasFunc = $cantFuncPorFunc * 1000 + $cantFuncPorFunc * 100;
         } else {
-            $costoP = 2300.00;
+            $cantLineasFunc = $cantFuncPorFunc * 1000 + $cantFuncPorFunc * 200;
         }
-        if ($tipoColorCosto == "color") {
-            $costoP = $costoP * 1.10;
-        }
-        return $costoP;
+        return $cantLineasFunc;
     }
 
-    /** Comprueba si el aviso es de tipo publicidad o no
-    * @param string $tipoAvisoEsPublicidad)
-    * @return boolean
+    /**
+    * Calcula a cuántos programadores Senior equivales los programadores Junior ingresados
+    * @param int $cantProgJuniorASenior
+    * @return float
     */
-    function esPublicidad($tipoAvisoEsPublicidad) {
-        /* boolean $resultado */
-        if ($tipoAvisoEsPublicidad == "publicidad") {
-            $resultado = true;
-        } else {
-            $resultado = false;
-        }
-        return $resultado;
+    function igualarASenior($cantProgJuniorASenior) {
+        /* float $cantProgSeniorDeJunior */
+        $cantProgSeniorDeJunior = $cantProgJuniorASenior / 3;
+        return $cantProgSeniorDeJunior;
     }
 
     /* PROGRAMA Principal */
-    /* Muestra el costo del aviso según su tipo y caracteristicas */
-    /* string $tipoAviso, $tipoColor */
-    /* int $cantLetras, $cantLineas */
-    /* float $costo */
-    echo "Ingrese el tipo de aviso (publicidad o clasificado): ";
-    $tipoAviso = trim(fgets(STDIN));
-    if (esPublicidad($tipoAviso) == true) {
-        echo "Ingrese la cantidad de letras de su publicidad: ";
-        $cantLetras = trim(fgets(STDIN));
-        echo "Ingrese el tipo de color de su publicidad (negro o color): ";
-        $tipoColor = trim(fgets(STDIN));
-        $costo = costoPublicidad($cantLetras, $tipoColor);
-        echo "El costo del aviso es: " . $costo;
-    } else {
-        echo "Ingrese la cantidad de líneas de su clasificado: ";
-        $cantLineas = trim(fgets(STDIN));
-        $costo = costoClasificado($cantLineas);
-        echo "El costo del aviso es: " . $costo;
-    }
+    /* Calcula y muestra el costo del sistema desarrollado */
+    /* int $cantFunc, $cantProgSenior, $cantProgJunior, $cantLineas */
+    /* string $tipoTec */
+    /* float $costo, $cantProgSeniorTotal */
+    echo "Ingrese la cantidad de funciones del sistema: ";
+    $cantFunc = trim(fgets(STDIN));
+    echo "Ingrese la cantidad de programadores Senior: ";
+    $cantProgSenior = trim(fgets(STDIN));
+    echo "Ingrese la cantidad de programadores Junior: ";
+    $cantProgJunior = trim(fgets(STDIN));
+    echo "Ingrese el tipo de tecnología utilizada en el sistema (desktop, web o embebido): ";
+    $tipoTec = trim(fgets(STDIN));
+    $cantProgSeniorTotal = $cantProgSenior + igualarASenior($cantProgJunior);
+    $cantLineas = cantLineasPorFunc($cantFunc, $tipoTec);
+    $costo = costoTotalSenior($cantProgSeniorTotal, $cantLineas);
+    echo "El costo total del sistema desarrollado es: " . $costo;
 ?>
