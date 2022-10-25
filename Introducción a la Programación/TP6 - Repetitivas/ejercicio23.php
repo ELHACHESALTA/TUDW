@@ -1,9 +1,9 @@
 <?php
     /* PROGRAMA dibujoRep */
-    /* int $i, $j, $digito, $N */
+    /* int $i, $j, $digito, $n */
     echo "Ingrese cantidad: ";
-    $N = trim(fgets(STDIN));
-    for ($i = 1; $i <= $N; $i++) {
+    $n = trim(fgets(STDIN));
+    for ($i = 1; $i <= $n; $i++) {
         $digito = $i % 2;
         for ($j = 1; $j <= $i; $j++) {
             echo $digito;

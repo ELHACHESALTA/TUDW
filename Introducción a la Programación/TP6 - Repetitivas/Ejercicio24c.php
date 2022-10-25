@@ -1,10 +1,10 @@
 <?php
     /* PROGRAMA Piramide */
-    /* int $i, $j, $digito, $N */
+    /* int $i, $j, $digito, $n */
     echo "Ingrese cantidad: ";
-    $N = trim(fgets(STDIN));
-    $digito = $N;
-    for ($i = 1; $i <= $N; $i++) {
+    $n = trim(fgets(STDIN));
+    $digito = $n;
+    for ($i = 1; $i <= $n; $i++) {
         for ($j = $digito; $j > 0; $j--) {
             echo $i;
         }

@@ -1,9 +1,9 @@
 <?php
     /* PROGRAMA Piramide */
-    /* int $i, $j, $N */
+    /* int $i, $j, $n */
     echo "Ingrese cantidad: ";
-    $N = trim(fgets(STDIN));
-    for ($i = $N; $i > 0; $i--) {
+    $n = trim(fgets(STDIN));
+    for ($i = $n; $i > 0; $i--) {
         for ($j = $i; $j > 0; $j--) {
             echo $i;
         }
