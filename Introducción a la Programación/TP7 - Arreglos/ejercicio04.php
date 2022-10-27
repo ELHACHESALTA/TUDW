@@ -1,6 +1,6 @@
 <?php
     /**
-     * a) Crea y retorna un arreglo bidimensional de arreglos asociativos dentro de un arreglo indexado con informacion de mis mascotas
+     * a) Crea y retorna un arreglo bidimensional de arreglos asociativos dentro de un arreglo indexado con información de mis mascotas
      * @return array
      */
     function cargarMascotas () {
@@ -75,8 +75,8 @@
 
     /* d) PROGRAMA Principal */
     /* Carga y muestra mis mascotas y busca y muestra la primera mascota con edad menor a la ingresada. */
-    /* array $misMascotas, int edadMenor, string $mascotaMenor */
-    echo "Se cargan las Mascotas. \n";
+    /* array $misMascotas, int $edadMenor, string $mascotaMenor */
+    echo "Se cargan las mascotas. \n";
     $misMascotas = cargarMascotas();
     echo "\n";
     echo "Lista de Mascotas:\n";
