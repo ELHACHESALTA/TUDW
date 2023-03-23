@@ -7,9 +7,9 @@
         private $ss;
 
         public function __construct() {
-            $hh = 00;
-            $mm = 00;
-            $ss = 00;
+            $this -> hh = 00;
+            $this -> mm = 00;
+            $this -> ss = 00;
         }
 
         public function getHh() {
@@ -24,16 +24,16 @@
             return $this -> ss;
         }
 
-        public function setHh($hh) {
-            return $this -> hh = $hh;
+        public function setHh($hhNuevo) {
+            return $this -> hh = $hhNuevo;
         }
 
-        public function setMm($mm) {
-            return $this -> mm = $mm;
+        public function setMm($mmNuevo) {
+            return $this -> mm = $mmNuevo;
         }
 
-        public function setSs($ss) {
-            return $this -> ss = $ss;
+        public function setSs($ssNuevo) {
+            return $this -> ss = $ssNuevo;
         }
 
         public function puesta_a_cero() {
