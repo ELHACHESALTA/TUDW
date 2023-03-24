@@ -84,9 +84,9 @@
             echo "Ingrese la contraseña a validar: ";
             $contraIngresada = trim(fgets(STDIN));
             if ($contraIngresada == $this -> getContrasenia()) {
-                $comprobacion = "La contraseña ingresada es correcta. \n";
+                $comprobacion = "La contraseña ingresada es correcta.";
             } else {
-                $comprobacion = "La contraseña ingresada NO es correcta. \n";
+                $comprobacion = "La contraseña ingresada NO es correcta.";
             }
             return $comprobacion;
         }
@@ -107,7 +107,7 @@
         }
 
         public function recordar() {
-            return "Su frase de recuerdo de contraseña es: " . $this -> getFraseRecuerdo() . "\n";
+            return "Su frase de recuerdo de contraseña es: " . $this -> getFraseRecuerdo();
         }
 
         public function __toString() {
