@@ -31,19 +31,19 @@
         }
 
         public function setPA($pANuevo) {
-            return $this -> pA = $pANuevo;
+            $this -> pA = $pANuevo;
         }
 
         public function setPB($pBNuevo) {
-            return $this -> pB = $pBNuevo;
+            $this -> pB = $pBNuevo;
         }
 
         public function setPC($pCNuevo) {
-            return $this -> pC = $pCNuevo;
+            $this -> pC = $pCNuevo;
         }
 
         public function setPD($pDNuevo) {
-            return $this -> pD = $pDNuevo;
+            $this -> pD = $pDNuevo;
         }
 
         public function mueveDerecha($d) {

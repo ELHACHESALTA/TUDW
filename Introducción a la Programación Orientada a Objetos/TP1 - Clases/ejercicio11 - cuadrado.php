@@ -20,7 +20,7 @@
         }
 
         public function setVertices($verticesNuevos) {
-            return $this -> vertices = $verticesNuevos;
+            $this -> vertices = $verticesNuevos;
         }
 
         public function area() {
@@ -39,7 +39,7 @@
             $verticeDesplazado[2]["y"] = $this -> getVertices()[2]["y"] + $dy;
             $verticeDesplazado[3]["x"] = $this -> getVertices()[3]["x"] + $dx;
             $verticeDesplazado[3]["y"] = $this -> getVertices()[3]["y"] + $dy;
-            return $this -> setVertices($verticeDesplazado);
+            $this -> setVertices($verticeDesplazado);
         }
 
         public function aumentarTamanio($t) {
@@ -51,7 +51,7 @@
             $verticeAumentado[2]["y"] = $this -> getVertices()[2]["y"] + $t;
             $verticeAumentado[3]["x"] = $this -> getVertices()[3]["x"] + $t;
             $verticeAumentado[3]["y"] = $this -> getVertices()[3]["y"] + $t;
-            return $this -> setVertices($verticeAumentado);
+            $this -> setVertices($verticeAumentado);
         }
 
         public function __toString() {

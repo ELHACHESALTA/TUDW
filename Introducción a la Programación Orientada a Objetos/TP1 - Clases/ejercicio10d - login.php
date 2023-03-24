@@ -52,31 +52,31 @@
         }
 
         public function setNombreUsuario($nombreUsuarioNuevo) {
-            return  $this -> nombreUsuario = $nombreUsuarioNuevo;
+            $this -> nombreUsuario = $nombreUsuarioNuevo;
         }
 
         public function setContrasenia($contraseniaNueva) {
-            return $this -> contrasenia = $contraseniaNueva;
+            $this -> contrasenia = $contraseniaNueva;
         }
 
         public function setFraseRecuerdo($fraseRecuerdoNueva) {
-            return $this -> fraseRecuerdo = $fraseRecuerdoNueva;
+            $this -> fraseRecuerdo = $fraseRecuerdoNueva;
         }
 
         public function setContrasenia1($contrasenia1Nueva) {
-            return $this -> contrasenia1 = $contrasenia1Nueva;
+            $this -> contrasenia1 = $contrasenia1Nueva;
         }
 
         public function setContrasenia2($contrasenia2Nueva) {
-            return $this -> contrasenia2 = $contrasenia2Nueva;
+            $this -> contrasenia2 = $contrasenia2Nueva;
         }
 
         public function setContrasenia3($contrasenia3Nueva) {
-            return $this -> contrasenia3 = $contrasenia3Nueva;
+            $this -> contrasenia3 = $contrasenia3Nueva;
         }
 
         public function setContrasenia4($contrasenia4Nueva) {
-            return $this -> contrasenia4 = $contrasenia4Nueva;
+            $this -> contrasenia4 = $contrasenia4Nueva;
         }
 
         public function validar() {
@@ -103,7 +103,7 @@
             $this -> setContrasenia3($this -> getContrasenia2());
             $this -> setContrasenia2($this -> getContrasenia1());
             $this -> setContrasenia1($this -> getContrasenia());
-            return $this -> setContrasenia($contraNueva);
+            $this -> setContrasenia($contraNueva);
         }
 
         public function recordar() {

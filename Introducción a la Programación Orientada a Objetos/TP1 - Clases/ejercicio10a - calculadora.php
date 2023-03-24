@@ -25,15 +25,15 @@
         }
 
         public function setNum1 ($nuevoNum1) {
-            return $this -> num1 = $nuevoNum1;
+            $this -> num1 = $nuevoNum1;
         }
 
         public function setNum2 ($nuevoNum2) {
-            return $this -> num2 = $nuevoNum2;
+            $this -> num2 = $nuevoNum2;
         }
 
         public function setOperacion ($nuevoOperacion) {
-            return $this -> operacion = $nuevoOperacion;
+            $this -> operacion = $nuevoOperacion;
         }
 
         public function operacionCalculadora () {

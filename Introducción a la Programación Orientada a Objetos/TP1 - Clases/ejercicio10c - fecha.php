@@ -25,15 +25,15 @@
         }
 
         public function setDia($diaNuevo) {
-            return $this -> dia = $diaNuevo;
+            $this -> dia = $diaNuevo;
         }
 
         public function setMes($mesNuevo) {
-            return $this -> mes = $mesNuevo;
+            $this -> mes = $mesNuevo;
         }
 
         public function setAnio($anioNuevo) {
-            return $this -> anio = $anioNuevo;
+            $this -> anio = $anioNuevo;
         }
 
         public function stringAbreviado() {
@@ -86,7 +86,9 @@
                     }
                 }
             } while ($diaAgregar != 0);
-            return $this -> setDia($diaI) . $this -> setMes($mesI) . $this -> setAnio($anioI);
+            $this -> setDia($diaI);
+            $this -> setMes($mesI);
+            $this -> setAnio($anioI);
         }
 
         public function stringExtendido() {

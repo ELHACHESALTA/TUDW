@@ -25,15 +25,15 @@
         }
 
         public function setHh($hhNuevo) {
-            return $this -> hh = $hhNuevo;
+            $this -> hh = $hhNuevo;
         }
 
         public function setMm($mmNuevo) {
-            return $this -> mm = $mmNuevo;
+            $this -> mm = $mmNuevo;
         }
 
         public function setSs($ssNuevo) {
-            return $this -> ss = $ssNuevo;
+            $this -> ss = $ssNuevo;
         }
 
         public function puesta_a_cero() {
