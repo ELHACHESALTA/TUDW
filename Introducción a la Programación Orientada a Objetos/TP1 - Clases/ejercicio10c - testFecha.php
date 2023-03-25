@@ -21,6 +21,6 @@
 
     echo $f -> stringExtendido() . "\n";
 
-    echo $f -> __toString() . "\n";
+    echo $f . "\n";
 
 ?>

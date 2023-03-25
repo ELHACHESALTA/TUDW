@@ -20,7 +20,7 @@
     echo $usuario1 -> recordar() . "\n";
     echo $usuario2 -> recordar() . "\n";
 
-    echo $usuario1 -> __toString() . "\n";
-    echo $usuario2 -> __toString() . "\n";
+    echo $usuario1 . "\n";
+    echo $usuario2 . "\n";
 
 ?>

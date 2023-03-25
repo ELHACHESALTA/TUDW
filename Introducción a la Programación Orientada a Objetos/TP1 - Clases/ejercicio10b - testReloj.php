@@ -7,14 +7,14 @@
     $rolex -> setMm(23);
     $rolex -> setSs(46);
 
-    echo $rolex -> __toString() . "\n";
+    echo $rolex . "\n";
 
     $rolex -> incremento();
 
-    echo $rolex -> __toString() . "\n";
+    echo $rolex . "\n";
 
     $rolex -> puesta_a_cero();
 
-    echo $rolex -> __toString() . "\n";
+    echo $rolex . "\n";
 
 ?>

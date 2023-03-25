@@ -10,6 +10,6 @@
     $resultado = $casio -> operacionCalculadora();
 
     echo $resultado . "\n";
-    echo $casio -> __toString() . "\n";
+    echo $casio . "\n";
 
 ?>

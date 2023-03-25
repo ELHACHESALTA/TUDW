@@ -18,6 +18,6 @@
 
     print_r ($C -> getVertices());
 
-    echo $C -> __toString();
+    echo $C;
 
 ?>

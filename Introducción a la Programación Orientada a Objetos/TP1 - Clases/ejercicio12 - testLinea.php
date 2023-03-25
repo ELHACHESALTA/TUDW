@@ -3,22 +3,22 @@
 
     $linea1 = new Linea();
 
-    echo $linea1 -> __toString() . "\n";
+    echo $linea1 . "\n";
 
-    print_r ($linea1 -> mueveDerecha(2));
+    ($linea1 -> mueveDerecha(2));
 
-    echo $linea1 -> __toString() . "\n";
+    echo $linea1 . "\n";
 
-    print_r ($linea1 -> mueveIzquierda(2));
+    ($linea1 -> mueveIzquierda(2));
 
-    echo $linea1 -> __toString() . "\n";
+    echo $linea1 . "\n";
 
-    print_r ($linea1 -> mueveArriba(2));
+    ($linea1 -> mueveArriba(2));
 
-    echo $linea1 -> __toString() . "\n";
+    echo $linea1 . "\n";
 
-    print_r ($linea1 -> mueveAbajo(2));
+    ($linea1 -> mueveAbajo(2));
 
-    echo $linea1 -> __toString() . "\n";
+    echo $linea1 . "\n";
 
 ?>
