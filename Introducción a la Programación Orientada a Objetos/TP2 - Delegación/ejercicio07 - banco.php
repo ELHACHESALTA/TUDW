@@ -48,10 +48,44 @@
             } else {
                 $colaClientesActualizada = $mostradorParaCliente -> getColaDeClientes();
                 array_push($colaClientesActualizada, $unClienteA);
+                sort($colaClientesActualizada);
                 $mostradorParaCliente -> setColaDeClientes($colaClientesActualizada);
+                $mostradorParaCliente -> ingresarTramite($unClienteA -> getObjTramite());
                 $comprobacion = true;
             }
             return $comprobacion;
+        }
+
+        public function promTramitesIngresadosDia() {
+            $totalTramitesIngresados = 0;
+            for ($i = 0; $i < count($this -> getArregloMostradores()); $i++) {
+                $totalTramitesIngresados = $totalTramitesIngresados + count($this -> getArregloMostradores()[$i] -> getColaDeTramites());
+            }
+            $promedio = $totalTramitesIngresados / 30;
+            return $promedio;
+        }
+
+        public function promTramitesCerradosDia() {
+            $totalTramitesCerrados = 0;
+            for ($i = 0; $i < count($this -> getArregloMostradores()); $i++) {
+                $totalTramitesCerrados = $totalTramitesCerrados + count($this -> getArregloMostradores()[$i] -> tramitesCerrados());
+            }
+            $promedio = $totalTramitesCerrados / 30;
+            return $promedio;
+        }
+
+        public function mostradorResuelveMasTramites() {
+            $mostradorMayor = "";
+            $porcentajeMayor = 0;
+            for ($i = 0; $i < count($this -> getArregloMostradores()); $i++) {
+                if ($this -> getArregloMostradores()[$i] -> tramitesCerrados() != null) {
+                    if ($porcentajeMayor < $this -> getArregloMostradores()[$i] -> porcentajeTramitesResueltos()) {
+                        $porcentajeMayor = $this -> getArregloMostradores()[$i] -> porcentajeTramitesResueltos();
+                        $mostradorMayor = $this -> getArregloMostradores()[$i];
+                    }
+                }
+            }
+            return $mostradorMayor;
         }
 
         public function __toString() {
