@@ -2,7 +2,7 @@
 
 ## Universidad Nacional del Comahue
 
->*Resolución de Trabajos Prácticos de la Carrera*
+>* :book: Resolución de Trabajos Prácticos de la Carrera*
 
 ---
 
@@ -23,7 +23,7 @@
 
 ## Segundo Año - Segundo Cuatrimestre
 
-2. Materia: Introducción a la Programación Orientada a Objetos (IPOO)
+### Materia: Introducción a la Programación Orientada a Objetos (IPOO)
 
 * [Trabajo Práctico N°0 - Repaso PHP](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP0%20-%20Repaso%20PHP)
 * [Trabajo Práctico N°1 - Clases](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP1%20-%20Clases)
