@@ -2,7 +2,7 @@
 
 ## Universidad Nacional del Comahue
 
->* :book: Resolución de Trabajos Prácticos de la Carrera*
+:book: *Resolución de Trabajos Prácticos de la Carrera*
 
 ---
 
