@@ -21,7 +21,7 @@
 
 ---
 
-## Segundo Año - Segundo Cuatrimestre
+## Primer Año - Segundo Cuatrimestre
 
 ### Materia: Introducción a la Programación Orientada a Objetos (IPOO)
 
