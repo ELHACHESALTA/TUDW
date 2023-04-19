@@ -12,7 +12,7 @@
     $responsable2 = new Responsable("Giany", "Cen", 23134566, "Tucuman 955", "gcen@gmail.com", 2993456789);
     $viaje2 = new Viaje("Tucuman", "12:00", "22:00", 2, 1200, "02/01/2023", 12, 3, $responsable2);
 
-    $colViajesFlechaBus  = ["0" => $viaje1, "1" => $viaje2];
+    $colViajesFlechaBus  = [$viaje1, $viaje2];
     $flechaBus = new Empresa("001", "Flecha Bus", $colViajesFlechaBus);
 
     $responsable3 = new Responsable("Andre", "Aguero", 12834344, "Richieri 34", "aaguero@gmail.com", 2991234567);
@@ -20,7 +20,7 @@
     $responsable4 = new Responsable("Jazmin", "Luore", 34934333, "Cipolletti 2412", "jloure@gmail.com", 2999876543);
     $viaje4 = new Viaje("Cipolletti", "14:00", "24:00", 4, 1400, "04/01/2023", 14, 3, $responsable4);
 
-    $colViajesViaBariloche  = ["0" => $viaje3, "1" => $viaje4];
+    $colViajesViaBariloche  = [$viaje3, $viaje4];
     $viaBariloche = new Empresa("002", "Via Bariloche", $colViajesViaBariloche);
 
     // 1 - Creo una colección con un mínimo de 2 empresas.
