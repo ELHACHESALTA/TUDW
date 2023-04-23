@@ -6,10 +6,10 @@
         private $mm;
         private $ss;
 
-        public function __construct() {
-            $this -> hh = 00;
-            $this -> mm = 00;
-            $this -> ss = 00;
+        public function __construct($hhC, $mmC, $ssC) {
+            $this -> hh = $hhC;
+            $this -> mm = $mmC;
+            $this -> ss = $ssC;
         }
 
         public function getHh() {
@@ -37,9 +37,9 @@
         }
 
         public function puesta_a_cero() {
-            $this -> setHh(00);
-            $this -> setMm(00);
-            $this -> setSs(00);
+            $this -> setHh(0);
+            $this -> setMm(0);
+            $this -> setSs(0);
         }
 
         public function incremento() {
@@ -67,7 +67,8 @@
         }
 
         public function __toString() {
-            return "(" . $this -> getHh() . "," . $this -> getMm() . "," . $this -> getSs() . ")";
+            $cadena = "\n" . "Horas:Minutos:Segundos -> " . $this -> getHh() . ":" . $this -> getMm() . ":" . $this -> getSs();
+            return $cadena;
         }
 
     }

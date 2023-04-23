@@ -1,7 +1,7 @@
 <?php
-    include 'ejercicio14 - cuentaBancaria.php';
+    include 'ejercicio14_CuentaBancaria.php';
 
-    $galicia = new CuentaBancaria();
+    $galicia = new CuentaBancaria(1, 12345678, 200, 365);
 
     echo $galicia -> getSaldoActual() . "\n";
 

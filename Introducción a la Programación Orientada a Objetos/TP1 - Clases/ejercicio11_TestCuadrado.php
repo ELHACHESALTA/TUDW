@@ -1,23 +1,26 @@
 <?php
-    include 'ejercicio11 - cuadrado.php';
+    include 'ejercicio11_Cuadrado.php';
 
-    $C = new Cuadrado();
+    $vertices[0] = ["x" => 1,"y" => 1];
+    $vertices[1] = ["x" => 5,"y" => 1];
+    $vertices[2] = ["x" => 1,"y" => 5];
+    $vertices[3] = ["x" => 5,"y" => 5];
 
-    print_r ($C -> getVertices());
+    $C = new Cuadrado($vertices);
 
-    echo $C -> area();
+    echo $C . "\n";
 
-    $punto["x"] = 2;
-    $punto["y"] = 2;
+    echo "\n" . "El área del cuadrado es: ";
+    echo $C -> area() . "\n";
+
+    $punto = ["x" => 2, "y" => 2];
 
     $C -> desplazar($punto);
 
-    print_r ($C -> getVertices());
+    echo $C . "\n";
 
     $C -> aumentarTamanio(2);
 
-    print_r ($C -> getVertices());
-
-    echo $C;
+    echo $C . "\n";
 
 ?>

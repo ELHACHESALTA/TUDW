@@ -1,11 +1,7 @@
 <?php
-    include 'ejercicio10b - reloj.php';
+    include 'ejercicio10b_Reloj.php';
 
-    $rolex = new Reloj();
-
-    $rolex -> setHh(9);
-    $rolex -> setMm(23);
-    $rolex -> setSs(46);
+    $rolex = new Reloj(9, 23, 46);
 
     echo $rolex . "\n";
 

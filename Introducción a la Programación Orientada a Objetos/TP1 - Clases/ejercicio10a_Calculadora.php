@@ -6,10 +6,10 @@
         private $num2;
         private $operacion;
 
-        public function __construct () {
-            $this -> num1 = 0;
-            $this -> num2 = 0;
-            $this -> operacion = "";
+        public function __construct ($num1C, $num2C, $operacionC) {
+            $this -> num1 = $num1C;
+            $this -> num2 = $num2C;
+            $this -> operacion = $operacionC;
         }
 
         public function getNum1 () {
@@ -24,16 +24,16 @@
             return $this -> operacion;
         }
 
-        public function setNum1 ($nuevoNum1) {
-            $this -> num1 = $nuevoNum1;
+        public function setNum1 ($num1Nuevo) {
+            $this -> num1 = $num1Nuevo;
         }
 
-        public function setNum2 ($nuevoNum2) {
-            $this -> num2 = $nuevoNum2;
+        public function setNum2 ($num2Nuevo) {
+            $this -> num2 = $num2Nuevo;
         }
 
-        public function setOperacion ($nuevoOperacion) {
-            $this -> operacion = $nuevoOperacion;
+        public function setOperacion ($operacionNuevo) {
+            $this -> operacion = $operacionNuevo;
         }
 
         public function operacionCalculadora () {
@@ -50,7 +50,8 @@
         }
 
         public function __toString() {
-            return "(".$this -> getNum1().", ".$this -> getNum2().", ".$this -> getOperacion().")";
+            $cadena = "\n" . "(".$this -> getNum1().", ".$this -> getNum2().", ".$this -> getOperacion().")";
+            return $cadena;
         }
 
     }

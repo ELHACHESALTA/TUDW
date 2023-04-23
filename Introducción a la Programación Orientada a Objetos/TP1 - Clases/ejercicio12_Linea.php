@@ -7,11 +7,11 @@
         private $pC;
         private $pD;
 
-        public function __construct() {
-            $this -> pA = 0;
-            $this -> pB = 0;
-            $this -> pC = 5;
-            $this -> pD = 5;
+        public function __construct($pAC, $pBC, $pCC, $pDC) {
+            $this -> pA = $pAC;
+            $this -> pB = $pBC;
+            $this -> pC = $pCC;
+            $this -> pD = $pDC;
         }
 
         public function getPA(){
@@ -67,7 +67,9 @@
         }
 
         public function __toString() {
-            return "Punto 1: (" . $this -> getPA() . "," . $this -> getPB() . ") - Punto 2: (" . $this -> getPC() . "," . $this -> getPD() . ")";
+            $cadena = "\n" . "Punto 1 de la linea: (" . $this -> getPA() . "," . $this -> getPB() . ")" . 
+            "\n" . "Punto 2 de la linea: (" . $this -> getPC() . "," . $this -> getPD() . ")";
+            return $cadena;
         }
 
     }

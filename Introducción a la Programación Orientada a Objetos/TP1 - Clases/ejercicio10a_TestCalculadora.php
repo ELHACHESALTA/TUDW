@@ -1,11 +1,7 @@
 <?php
-    include 'ejercicio10a - calculadora.php';
-    $resultado = 0;
+    include 'ejercicio10a_Calculadora.php';
 
-    $casio = new Calculadora();
-    $casio -> setNum1 (2);
-    $casio -> setNum2 (3);
-    $casio -> setOperacion("*");
+    $casio = new Calculadora(2, 3, "*");
 
     $resultado = $casio -> operacionCalculadora();
 

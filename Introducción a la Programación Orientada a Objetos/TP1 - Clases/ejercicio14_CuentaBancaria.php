@@ -7,11 +7,11 @@
         private $saldoActual;
         private $interesAnual;
 
-        public function __construct() {
-            $this -> numeroCuenta = 1;
-            $this -> dni = 12345678;
-            $this -> saldoActual = 200;
-            $this -> interesAnual = 365;
+        public function __construct($numeroCuentaC, $dniC, $saldoActualC, $interesAnualC) {
+            $this -> numeroCuenta = $numeroCuentaC;
+            $this -> dni = $dniC;
+            $this -> saldoActual = $saldoActualC;
+            $this -> interesAnual = $interesAnualC;
         }
 
         public function getNumeroCuenta() {
@@ -62,10 +62,11 @@
         }
 
         public function __toString() {
-            return "Número de Cuenta: " . $this -> getNumeroCuenta() . "\n" . 
-            "DNI: " . $this -> getDni() . "\n" . 
-            "Saldo Actual: " . $this -> getSaldoActual() . "\n" . 
-            "Interes Anual: " . $this -> getInteresAnual() . "\n";
+            $cadena = "\n" . "Número de la cuenta: " . $this -> getNumeroCuenta() . 
+            "\n" . "DNI de la cuenta: " . $this -> getDni() . 
+            "\n" . "Saldo actual de la cuenta: " . $this -> getSaldoActual() . 
+            "\n" . "Interes anual de la cuenta: " . $this -> getInteresAnual();
+            return $cadena;
         }
 
     }

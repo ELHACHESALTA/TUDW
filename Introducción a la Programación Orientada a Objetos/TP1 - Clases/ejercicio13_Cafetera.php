@@ -5,9 +5,9 @@
         private $capacidadMaxima;
         private $cantidadActual;
 
-        public function __construct() {
-            $this -> capacidadMaxima = 100;
-            $this -> cantidadActual = 0;
+        public function __construct($capacidadMaximaC, $cantidadActualC) {
+            $this -> capacidadMaxima = $capacidadMaximaC;
+            $this -> cantidadActual = $cantidadActualC;
         }
 
         public function getCapacidadMaxima() {
@@ -18,12 +18,12 @@
             return $this -> cantidadActual;
         }
 
-        public function setCapacidadMaxima($capacidadMaximaNueva) {
-            $this -> capacidadMaxima = $capacidadMaximaNueva;
+        public function setCapacidadMaxima($capacidadMaximaNuevo) {
+            $this -> capacidadMaxima = $capacidadMaximaNuevo;
         }
 
-        public function setCantidadActual($cantidadActualNueva) {
-            $this -> cantidadActual = $cantidadActualNueva;
+        public function setCantidadActual($cantidadActualNuevo) {
+            $this -> cantidadActual = $cantidadActualNuevo;
         }
 
         public function llenarCafetera() {
@@ -31,15 +31,16 @@
         }
 
         public function servirTaza($cantidad) {
+            $comprobacion = 1;
             if ($this -> getCantidadActual() >= $cantidad) {
                 $this -> setCantidadActual($this -> getCantidadActual() - $cantidad);
             } elseif ($this -> getCantidadActual() != 0) {
                 $this -> setCantidadActual(0);
-                echo "No se llego a llenar la ultima taza con suficiente cafe. Recargue la cafetera. \n";
+                $comprobacion = -1;
             } else {
-                echo "No queda más cafe para llenar otra taza. Recargue la cafetera. \n";
+                $comprobacion = 0;
             }
-            
+            return $comprobacion;
         }
 
         public function vaciarCafetera() {
@@ -51,7 +52,9 @@
         }
 
         public function __toString() {
-            return "(" . $this -> getCapacidadMaxima() . "," . $this -> getCantidadActual() . ")";
+            $cadena = "\n" . "Capacidad máxima de la cafetera: " . $this -> getCapacidadMaxima() . 
+            "\n" . "Cantidad actual de la cafetera: " . $this -> getCantidadActual();
+            return $cadena;
         }
 
     }

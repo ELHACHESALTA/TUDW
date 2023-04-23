@@ -10,17 +10,14 @@
         private $contrasenia3;
         private $contrasenia4;
 
-        public function __construct() {
-            echo "Ingrese un nombre de Usuario: ";
-            $this -> nombreUsuario = trim(fgets(STDIN));
-            echo "Ingrese una contraseña: ";
-            $this -> contrasenia = trim(fgets(STDIN));
-            echo "Ingrese una frase de recuerdo de contraseña: ";
-            $this -> fraseRecuerdo = trim(fgets(STDIN));
-            $this -> contrasenia1 = "1111";
-            $this -> contrasenia2 = "2222";
-            $this -> contrasenia3 = "3333";
-            $this -> contrasenia4 = "4444";
+        public function __construct($nombreUsuarioC, $contraseniaC, $fraseRecuerdoC, $contrasenia1C, $contrasenia2C, $contrasenia3C, $contrasenia4C) {
+            $this -> nombreUsuario = $nombreUsuarioC;
+            $this -> contrasenia = $contraseniaC;
+            $this -> fraseRecuerdo = $fraseRecuerdoC;
+            $this -> contrasenia1 = $contrasenia1C;
+            $this -> contrasenia2 = $contrasenia2C;
+            $this -> contrasenia3 = $contrasenia3C;
+            $this -> contrasenia4 = $contrasenia4C;
         }
 
         public function getNombreUsuario() {
@@ -55,63 +52,74 @@
             $this -> nombreUsuario = $nombreUsuarioNuevo;
         }
 
-        public function setContrasenia($contraseniaNueva) {
-            $this -> contrasenia = $contraseniaNueva;
+        public function setContrasenia($contraseniaNuevo) {
+            $this -> contrasenia = $contraseniaNuevo;
         }
 
-        public function setFraseRecuerdo($fraseRecuerdoNueva) {
-            $this -> fraseRecuerdo = $fraseRecuerdoNueva;
+        public function setFraseRecuerdo($fraseRecuerdoNuevo) {
+            $this -> fraseRecuerdo = $fraseRecuerdoNuevo;
         }
 
-        public function setContrasenia1($contrasenia1Nueva) {
-            $this -> contrasenia1 = $contrasenia1Nueva;
+        public function setContrasenia1($contrasenia1Nuevo) {
+            $this -> contrasenia1 = $contrasenia1Nuevo;
         }
 
-        public function setContrasenia2($contrasenia2Nueva) {
-            $this -> contrasenia2 = $contrasenia2Nueva;
+        public function setContrasenia2($contrasenia2Nuevo) {
+            $this -> contrasenia2 = $contrasenia2Nuevo;
         }
 
-        public function setContrasenia3($contrasenia3Nueva) {
-            $this -> contrasenia3 = $contrasenia3Nueva;
+        public function setContrasenia3($contrasenia3Nuevo) {
+            $this -> contrasenia3 = $contrasenia3Nuevo;
         }
 
-        public function setContrasenia4($contrasenia4Nueva) {
-            $this -> contrasenia4 = $contrasenia4Nueva;
+        public function setContrasenia4($contrasenia4Nuevo) {
+            $this -> contrasenia4 = $contrasenia4Nuevo;
         }
 
-        public function validar() {
-            $comprobacion = "";
-            echo "Ingrese la contraseña a validar: ";
-            $contraIngresada = trim(fgets(STDIN));
-            if ($contraIngresada == $this -> getContrasenia()) {
-                $comprobacion = "La contraseña ingresada es correcta.";
-            } else {
-                $comprobacion = "La contraseña ingresada NO es correcta.";
+        public function validar($contraIngresada) {
+            $comprobacion = true;
+            if ($contraIngresada != $this -> getContrasenia()) {
+                $comprobacion = false;
             }
             return $comprobacion;
         }
 
-        public function cambiar() {
-            echo "Ingrese la nueva contraseña a cambiar: ";
-            $contraNueva = trim(fgets(STDIN));
-            while ($contraNueva == $this -> getContrasenia() ||$contraNueva == $this -> getContrasenia1() || $contraNueva == $this -> getContrasenia2() || $contraNueva == $this -> getContrasenia3() || $contraNueva == $this -> getContrasenia4()) {
-                echo "La contraseña coincide con la existente o alguna de las últimas 4 usadas. \n";
-                echo "Ingrese una nueva contraseña a cambiar: ";
-                $contraNueva = trim(fgets(STDIN));
+        public function cambiar($contraNueva) {
+            $comprobacion = true;
+            if ($contraNueva != $this -> getContrasenia()) {
+                if ($contraNueva != $this -> getContrasenia1()) {
+                    if ($contraNueva != $this -> getContrasenia2()) {
+                        if ($contraNueva != $this -> getContrasenia3()) {
+                            if ($contraNueva != $this -> getContrasenia4()) {
+                                $this -> setContrasenia4($this -> getContrasenia3());
+                                $this -> setContrasenia3($this -> getContrasenia2());
+                                $this -> setContrasenia2($this -> getContrasenia1());
+                                $this -> setContrasenia1($this -> getContrasenia());
+                                $this -> setContrasenia($contraNueva);
+                            }
+                        }
+                    }
+                }
+            } else {
+                $comprobacion = false;
             }
-            $this -> setContrasenia4($this -> getContrasenia3());
-            $this -> setContrasenia3($this -> getContrasenia2());
-            $this -> setContrasenia2($this -> getContrasenia1());
-            $this -> setContrasenia1($this -> getContrasenia());
-            $this -> setContrasenia($contraNueva);
+            return $comprobacion;
         }
 
         public function recordar() {
-            return "Su frase de recuerdo de contraseña es: " . $this -> getFraseRecuerdo();
+            $cadena = "Su frase de recuerdo de contraseña es: " . $this -> getFraseRecuerdo();
+            return $cadena;
         }
 
         public function __toString() {
-            return  "(" . $this -> getNombreUsuario() . "," . $this -> getContrasenia() . "," . $this -> getFraseRecuerdo() . "," . $this -> getContrasenia1() . "," . $this -> getContrasenia2() . "," . $this -> getContrasenia3() . "," . $this -> getContrasenia4() . ")";
+            $cadena = "\n" . "Nombre del usuario: " . $this -> getNombreUsuario() . 
+            "\n" . "Contraseña del usuario: " . $this -> getContrasenia() . 
+            "\n" . "Frase de recuerdo del usuario: " . $this -> getFraseRecuerdo() . 
+            "\n" . "Primera contraseña anterior del usuario: " . $this -> getContrasenia1() . 
+            "\n" . "Segunda contraseña anterior del usuario: " . $this -> getContrasenia2() . 
+            "\n" . "Tercera contraseña anterior del usuario: " . $this -> getContrasenia3() . 
+            "\n" . "Cuarta contraseña anterior del usuario: " . $this -> getContrasenia4();
+            return $cadena;
         }
     }
 

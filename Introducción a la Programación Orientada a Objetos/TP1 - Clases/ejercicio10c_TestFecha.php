@@ -1,14 +1,14 @@
 <?php
-    include 'ejercicio10c - fecha.php';
+    include 'ejercicio10c_Fecha.php';
 
-    $f = new Fecha();
+    $f = new Fecha(29, 10, 1991);
 
     echo $f -> stringAbreviado() . "\n";
 
     echo $f -> stringExtendido() . "\n";
 
-    $f -> setDia(29);
-    $f -> setMes(10);
+    $f -> setDia(31);
+    $f -> setMes(12);
     $f -> setAnio (1991);
 
     echo $f -> stringAbreviado() . "\n";

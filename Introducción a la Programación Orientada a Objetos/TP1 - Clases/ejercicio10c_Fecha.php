@@ -6,10 +6,10 @@
         private $mes;
         private $anio;
 
-        public function __construct(){
-            $this -> dia = 1;
-            $this -> mes = 1;
-            $this -> anio = 1;
+        public function __construct($diaC, $mesC, $anioC){
+            $this -> dia = $diaC;
+            $this -> mes = $mesC;
+            $this -> anio = $anioC;
         }
 
         public function getDia(){
@@ -37,7 +37,8 @@
         }
 
         public function stringAbreviado() {
-            return $this -> getDia() . "/" . $this -> getMes() . "/" . $this -> getAnio();
+            $cadena = $this -> getDia() . "/" . $this -> getMes() . "/" . $this -> getAnio();
+            return $cadena;
         }
 
         public function incremento($diaAgregar, $fecha) {
@@ -118,11 +119,13 @@
             } elseif ($this -> getMes() == 12 ) {
                 $mesExtendido = "diciembre";
             }
-            return $this -> getDia() . " de " . $mesExtendido . " de " . $this -> getAnio();
+            $cadena = $this -> getDia() . " de " . $mesExtendido . " de " . $this -> getAnio();
+            return $cadena;
         }
 
         public function __toString() {
-            return "(" . $this -> getDia() . "," . $this -> getMes() . "," . $this -> getAnio() . ")";
+            $cadena = "\n" . "Día/Mes/Año -> " . $this -> stringAbreviado();
+            return $cadena;
         }
 
     }

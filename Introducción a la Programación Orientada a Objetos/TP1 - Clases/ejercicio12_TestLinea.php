@@ -1,7 +1,7 @@
 <?php
-    include 'ejercicio12 - Linea.php';
+    include 'ejercicio12_Linea.php';
 
-    $linea1 = new Linea();
+    $linea1 = new Linea(0, 0, 5, 5);
 
     echo $linea1 . "\n";
 

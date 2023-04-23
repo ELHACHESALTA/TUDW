@@ -9,15 +9,10 @@
         private $autor;
         
         public function __construct($isbnC, $tituloC, $anioEdicionC, $editorialC, $autorC) {
-            // echo "Ingrese el ISBN del libro: ";
             $this -> isbn = $isbnC;
-            // echo "Ingrese el título del libro";
             $this -> titulo = $tituloC;
-            // echo "Ingrese el año de edición del libro: ";
             $this -> anioEdicion = $anioEdicionC;
-            // echo "Ingrese la editorias del libro: ";
             $this -> editorial = $editorialC;
-            // echo "Ingrese los datos del autor del libro: ";
             $this -> autor = $autorC;
         }
 
@@ -76,11 +71,12 @@
         }
 
         public function __toString() {
-            return "ISNB: " . $this -> getIsbn() . "\n" . 
-            "Titulo: " . $this -> getTitulo() . "\n" . 
-            "Año de Edición: " . $this -> getAnioEdicion() . "\n" . 
-            "Editorial: " . $this -> getEditorial() . "\n" . 
-            "Autor: " . $this -> getAutor() . "\n";
+            $cadena = "\n" . "ISNB del libro: " . $this -> getIsbn() . 
+            "\n" . "Titulo del libro: " . $this -> getTitulo() . 
+            "\n" . "Año de edición del libro: " . $this -> getAnioEdicion() . 
+            "\n" . "Editorial del libro: " . $this -> getEditorial() . 
+            "\n" . "Autor del libro: " . $this -> getAutor();
+            return $cadena;
         }
 
     }
