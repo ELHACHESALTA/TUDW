@@ -1,4 +1,4 @@
-# Tecnicatura Universitaria en Desarrollo Web
+# <b>Tecnicatura Universitaria en Desarrollo Web</b>
 
 ## Universidad Nacional del Comahue
 
@@ -6,9 +6,9 @@
 
 ---
 
-## Primer Año - Primer Cuatrimestre
+## <b>Primer Año - Primer Cuatrimestre</b>
 
-### Materia: Introducción a la Programacion (IP)
+### <u>Materia:</u> Introducción a la Programacion (IP)
 
 - [Parciales](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n/Parciales)
 - [Trabajo Práctico N°2 - Algoritmos](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n/TP2%20-%20Algoritmos)
@@ -21,9 +21,9 @@
 
 ---
 
-## Primer Año - Segundo Cuatrimestre
+## <b>Primer Año - Segundo Cuatrimestre</b>
 
-### Materia: Introducción a la Programación Orientada a Objetos (IPOO)
+### <u>Materia:</u> Introducción a la Programación Orientada a Objetos (IPOO)
 
 - [Parciales](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/Parciales)
 - [Trabajo Práctico N°0 - Repaso PHP](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP0%20-%20Repaso%20PHP)
@@ -31,9 +31,15 @@
 - [Trabajo Práctico N°2 - Delegación](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP2%20-%20Delegaci%C3%B3n)
 - [Trabajos Prácticos Entregables](https://github.com/ELHACHESALTA/Entregables_IPOO_2023)
 
-### Materia: Programación Estática y Laboratorio Web (PEyLW)
+### <u>Materia:</u> Programación Estática y Laboratorio Web (PEyLW)
 
-- [Trabajo Práctico N°1 - HTML Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP1%20-%20HTML%20Introducci%C3%B3n)
-- [Trabajo Práctico N°2 - HTML Tablas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP2%20-%20HTML%20Tablas)
-- [Trabajo Práctico N°3 - HTML Formularios](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP3%20-%20HTML%20Formularios)
-- [Trabajo Práctico N°4 - HTML Iframes y Multimedia](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP4%20-%20HTML%20Iframes%20y%20Multimedia)
+- #### HTML
+
+    - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP1%20-%20HTML%20Introducci%C3%B3n)
+    - [Trabajo Práctico N°2 - Tablas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP2%20-%20HTML%20Tablas)
+    - [Trabajo Práctico N°3 - Formularios](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP3%20-%20HTML%20Formularios)
+    - [Trabajo Práctico N°4 - Iframes y Multimedia](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP4%20-%20HTML%20Iframes%20y%20Multimedia)
+
+- #### CSS
+
+    - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP1%20Introducci%C3%B3n)
