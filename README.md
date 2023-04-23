@@ -1,4 +1,4 @@
-# <b>Tecnicatura Universitaria en Desarrollo Web</b>
+# **Tecnicatura Universitaria en Desarrollo Web**
 
 ## Universidad Nacional del Comahue
 
@@ -6,9 +6,9 @@
 
 ---
 
-## <b>Primer Año - Primer Cuatrimestre</b>
+## **Primer Año - Primer Cuatrimestre**
 
-### <u>Materia:</u> Introducción a la Programacion (IP)
+### *Materia:* Introducción a la Programacion (IP)
 
 - [Parciales](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n/Parciales)
 - [Trabajo Práctico N°2 - Algoritmos](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n/TP2%20-%20Algoritmos)
@@ -21,9 +21,9 @@
 
 ---
 
-## <b>Primer Año - Segundo Cuatrimestre</b>
+## **Primer Año - Segundo Cuatrimestre**
 
-### <u>Materia:</u> Introducción a la Programación Orientada a Objetos (IPOO)
+### Materia: Introducción a la Programación Orientada a Objetos (IPOO)
 
 - [Parciales](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/Parciales)
 - [Trabajo Práctico N°0 - Repaso PHP](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP0%20-%20Repaso%20PHP)
@@ -31,7 +31,7 @@
 - [Trabajo Práctico N°2 - Delegación](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP2%20-%20Delegaci%C3%B3n)
 - [Trabajos Prácticos Entregables](https://github.com/ELHACHESALTA/Entregables_IPOO_2023)
 
-### <u>Materia:</u> Programación Estática y Laboratorio Web (PEyLW)
+### Materia: Programación Estática y Laboratorio Web (PEyLW)
 
 - #### HTML
 
