@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio10b_Reloj.php';
+    include_once ("ejercicio10b_Reloj.php");
 
     $rolex = new Reloj(9, 23, 46);
 

@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio11_Cuadrado.php';
+    include_once ("ejercicio11_Cuadrado.php");
 
     $vertices[0] = ["x" => 1,"y" => 1];
     $vertices[1] = ["x" => 5,"y" => 1];

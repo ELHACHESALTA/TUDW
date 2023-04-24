@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio10c_Fecha.php';
+    include_once ("ejercicio10c_Fecha.php");
 
     $f = new Fecha(29, 10, 1991);
 

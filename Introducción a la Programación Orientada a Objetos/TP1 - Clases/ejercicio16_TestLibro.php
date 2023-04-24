@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio16_Libro.php';
+    include_once ("ejercicio16_Libro.php");
 
     $isbn1 = 9788478884452; $titulo1 = "Harry Potter y la piedra filosofal"; $anioEdicion1 = 1998; $editorial1 = "Salamandra"; $autor1 = "J. K. Rowling";
     $isbn2 = 9788478884957; $titulo2 = "Harry Potter y la cámara secreta"; $anioEdicion2 = 1999; $editorial2 = "Salamandra"; $autor2 = "J. K. Rowling";

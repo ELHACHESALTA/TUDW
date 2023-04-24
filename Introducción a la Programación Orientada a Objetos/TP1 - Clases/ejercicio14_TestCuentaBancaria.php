@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio14_CuentaBancaria.php';
+    include_once ("ejercicio14_CuentaBancaria.php");
 
     $galicia = new CuentaBancaria(1, 12345678, 200, 365);
 

@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio13_Cafetera.php';
+    include_once ("ejercicio13_Cafetera.php");
 
     $cafetera1 = new Cafetera(100, 0);
 

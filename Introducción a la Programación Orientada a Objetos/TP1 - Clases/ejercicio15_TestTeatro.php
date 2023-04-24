@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio15_Teatro.php';
+    include_once ("ejercicio15_Teatro.php");
 
     $funciones[0] = ["nombre" => "Los locos adams", "precio" => 150];
     $funciones[1] = ["nombre" => "Dragon ball", "precio" => 200];

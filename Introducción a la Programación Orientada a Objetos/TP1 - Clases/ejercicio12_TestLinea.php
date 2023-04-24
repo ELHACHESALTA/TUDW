@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio12_Linea.php';
+    include_once ("ejercicio12_Linea.php");
 
     $linea1 = new Linea(0, 0, 5, 5);
 

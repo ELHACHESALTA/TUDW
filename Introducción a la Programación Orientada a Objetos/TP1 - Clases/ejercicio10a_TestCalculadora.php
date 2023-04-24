@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio10a_Calculadora.php';
+    include_once ("ejercicio10a_Calculadora.php");
 
     $casio = new Calculadora(2, 3, "*");
 

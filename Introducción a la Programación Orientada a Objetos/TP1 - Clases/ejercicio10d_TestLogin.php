@@ -1,5 +1,5 @@
 <?php
-    include 'ejercicio10d_Login.php';
+    include_once ("ejercicio10d_Login.php");
 
     $usuario1 = new Login("ELHACHE", 1234, "ABCD", 1111, 2222, 3333, 4444);
 
