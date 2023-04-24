@@ -54,15 +54,25 @@
             return $comprobacion;
         }
 
-        public function __toString() {
-            $listaMostradores = "";
+        public function stringMostradores() {
+            $listaMostradores = "\n";
             $datosMostradores = $this -> getArregloMostradores();
             for ($i = 0; $i < count($this -> getArregloMostradores()); $i++) {
-                $listaMostradores = $listaMostradores . $datosMostradores[$i];
+                if ($i < (count($this -> getArregloMostradores()) - 1)) {
+                    $listaMostradores = $listaMostradores . $datosMostradores[$i] . "\n";
+                } else {
+                    $listaMostradores = $listaMostradores . $datosMostradores[$i];
+                }
             }
-            $impresion = "\n" . "Los mostradores del banco son: " . 
-            $listaMostradores;
-            return $impresion;
+            if ($datosMostradores == "\n") {
+                $datosMostradores = $datosMostradores . " - No hay mostradores cargados.";
+            }
+            return $listaMostradores;
+        }
+
+        public function __toString() {
+            $cadena = "\n" . "Los mostradores del banco son: " . $this -> stringMostradores();
+            return $cadena;
         }
 
     }

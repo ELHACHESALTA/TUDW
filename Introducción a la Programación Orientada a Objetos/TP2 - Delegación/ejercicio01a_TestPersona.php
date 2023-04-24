@@ -1,6 +1,6 @@
 <?php
 
-    include 'ejercicio01a - persona.php';   
+    include_once ("ejercicio01a_Persona.php");   
 
     $persona1 = new Persona("Fede", "Hache", "Hombre", 19182833);
 
@@ -14,6 +14,6 @@
     $persona1 -> setTipo("Mujer");
     $persona1 -> setDni("35948732");
 
-    echo $persona1;
+    echo $persona1 . "\n";
 
 ?>

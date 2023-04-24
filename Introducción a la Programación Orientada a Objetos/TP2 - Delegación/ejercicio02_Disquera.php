@@ -68,25 +68,24 @@
 
         public function abrirDisquera($hora, $minuto) {
             $comprobacion = $this -> dentroHorarioAtencion($hora, $minuto);
-            if ($comprobacion = true) {
+            if ($comprobacion == true) {
                 $this -> setEstado("abierto");
             }
         }
 
         public function cerrarDisquera($hora, $minuto) {
             $comprobacion = $this -> dentroHorarioAtencion($hora, $minuto);
-            if ($comprobacion = false) {
+            if ($comprobacion == false) {
                 $this -> setEstado("cerrado");
             }
         }
 
         public function __toString() {
-            $impresion = "Horario de atención: desde " . $this -> getHoraDesde() . " hasta " . $this -> getHoraHasta() . "\n" . 
-            "Estado: " . $this -> getEstado() . "\n" . 
-            "Direccion: " . $this -> getDireccion() . "\n" . 
-            "Información del dueño: \n" . 
-            $this -> getDuenio() . "\n";
-            return $impresion;
+            $cadena = "\n" . "Horario de atención: desde " . $this -> getHoraDesde() . " hasta " . $this -> getHoraHasta() . 
+            "\n" . "Estado: " . $this -> getEstado() . 
+            "\n" . "Direccion: " . $this -> getDireccion() . 
+            "\n" . "Información del dueño: " . $this -> getDuenio();
+            return $cadena;
         }
 
     }

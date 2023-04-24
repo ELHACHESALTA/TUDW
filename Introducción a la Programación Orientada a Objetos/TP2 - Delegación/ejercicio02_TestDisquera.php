@@ -1,6 +1,6 @@
 <?php
-    include 'ejercicio02 - disquera.php';
-    include 'ejercicio01a - persona.php';
+    include_once("ejercicio02_Disquera.php");
+    include_once("ejercicio01a_Persona.php");
 
     $persona1 = new Persona("Fede", "Hache", "Hombre", 19182833);
     $persona2 = new Persona("Giany", "Ce", "Mujer", 35192873);
@@ -19,11 +19,11 @@
     $disquera1 -> setDireccion("San Juan 312");
     $disquera1 -> setDuenio($persona2);
 
-    echo $disquera1;
+    echo $disquera1 . "\n";
 
     $disquera1 -> abrirDisquera(8, 0);
     $disquera1 -> cerrarDisquera(8, 0);
 
-    echo $disquera1;
+    echo $disquera1 . "\n";
 
 ?>

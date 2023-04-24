@@ -65,15 +65,26 @@
             return $comprobacion;
         }
 
-        public function __toString() {
-            $listaFunciones = "";
+        public function stringFunciones() {
+            $listaFunciones = "\n";
             for($i = 0; $i < count($this -> getArregloFunciones()); $i++) {
-                $listaFunciones = $listaFunciones . $this -> getArregloFunciones()[$i];
+                if ($i < (count($this -> getArregloFunciones()) - 1)) {
+                    $listaFunciones = $listaFunciones . $this -> getArregloFunciones()[$i] . "\n";
+                } else {
+                    $listaFunciones = $listaFunciones . $this -> getArregloFunciones()[$i];
+                }
             }
-            $impresion = "\n" . "Nombre del teatro: " . $this -> getNombreTeatro() . 
+            if ($listaFunciones == "\n") {
+                $listaFunciones = $listaFunciones . " - No hay funciones en el teatro.";
+            }
+            return $listaFunciones;
+        }
+
+        public function __toString() {
+            $cadena = "\n" . "Nombre del teatro: " . $this -> getNombreTeatro() . 
             "\n" . "Direccion: " . $this -> getDireccion() . 
-            "\n" . "Funciones: \n" . $listaFunciones;            
-            return $impresion;
+            "\n" . "Funciones: " . $this -> stringFunciones();            
+            return $cadena;
         }
 
     }

@@ -1,15 +1,14 @@
 <?php
 
-    include 'ejercicio08 - funcion.php';
-    include 'ejercicio08 - teatro.php';
+    include_once ("ejercicio08_Funcion.php");
+    include_once ("ejercicio08_Teatro.php");
 
-    $funcion1 = new Funcion ("Mickey Mouse 1", "11:30:00", "04:00:00", "300");
+    $funcion1 = new Funcion ("Mickey Mouse 1", "11:30:00", "01:00:00", "300");
     $funcion2 = new Funcion ("Mickey Mouse 2", "12:30:00", "01:00:00", "300");
-    $funcion3 = new Funcion ("Mickey Mouse 3", "13:30:00", "01:00:00", "300");
+    $funcion3 = new Funcion ("Mickey Mouse 3", "13:30:00", "03:00:00", "300");
     $funcion4 = new Funcion ("Mickey Mouse 4", "14:30:00", "01:00:00", "300");
 
-    $arregloFunciones = [];
-    $teatro1 = new Teatro("Teatro Colon", "San Martin 132", $arregloFunciones);
+    $teatro1 = new Teatro("Teatro Colon", "San Martin 132", []);
 
     if ($teatro1 -> cargarFuncion($funcion1) == false) {
         echo "La función 1 se ha cargado correctamente. \n";

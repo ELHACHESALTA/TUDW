@@ -29,38 +29,43 @@
         public function siguientePagina() {
             $paginaActual = $this -> getnumPagLeyendo();
             $libroLeido = $this -> getLibro();
+            $comprobacion = true;
             if ($paginaActual == $libroLeido -> getCantPag()) {
-                echo "\n" . "Ha llegado a la última página del libro, no se puede avanzar más. \n";
+                $comprobacion = false;
             } else {
                 $paginaActual++;
                 $this -> setNumPagLeyendo($paginaActual);
             }
+            return $comprobacion;
         }
 
         public function recrocederPagina() {
             $paginaActual = $this -> getnumPagLeyendo();
+            $comprobacion = true;
             if ($paginaActual == 1) {
-                echo "\n" . "Está leyendo la primera página del libro, no puede retroceder más. \n";
+                $comprobacion = false;
             } else {
                 $paginaActual--;
                 $this -> setNumPagLeyendo($paginaActual);
             }
+            return $comprobacion;
         }
 
         public function irPagina($numPag) {
             $libroLeido = $this -> getLibro();
+            $comprobacion = true;
             if (0 < $numPag && $numPag <= $libroLeido -> getCantPag()) {
                 $this -> setNumPagLeyendo($numPag);
             } else {
-                echo "\n" . "Ha ingresado un número de página no válido para el libro. \n";
+                $comprobacion = false;
             }
+            return $comprobacion;
         }
 
         public function __toString() {
-            $impresion = "\n" . "Información del Libro: \n" . 
-            $this -> getLibro() . 
-            "Página actual: " . $this -> getNumPagLeyendo() . "\n";
-            return $impresion;
+            $cadena = "\n" . "Información del Libro: " . $this -> getLibro() . 
+            "\n" . "Página actual: " . $this -> getNumPagLeyendo();
+            return $cadena;
         }
 
     }

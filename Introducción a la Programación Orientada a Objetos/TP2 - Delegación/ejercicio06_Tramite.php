@@ -37,9 +37,9 @@
         }
 
         public function __toString() {
-            $impresion = "\n" . " - Tipo de trámite: " . $this -> getTipoTramite() . "\n" . 
-            " - Hora de creación del trámite: " . $this -> getHoraCreacion() . "\n" . 
-            " - Hora de resolución del trámite: " . $this -> getHoraResolucion();
+            $impresion = "\n" . " - Tipo de trámite: " . $this -> getTipoTramite() . 
+            "\n" . " - Hora de creación del trámite: " . $this -> getHoraCreacion() . 
+            "\n" . " - Hora de resolución del trámite: " . $this -> getHoraResolucion();
             return $impresion;
         }
 

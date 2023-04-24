@@ -77,15 +77,15 @@
         }
 
         public function __toString() {
-            $impresion = "  - Tipo de trámite: " . $this -> getTipoTramite() . "\n" . 
-            "  - Hora de creación del trámite: " . $this -> getHoraCreacion() . "\n" . 
-            "  - Hora de resolución del trámite: " . $this -> getHoraResolucion() . "\n" . 
-            "  - Fecha de creación del trámite: " . $this -> getFechaCreacion() . "\n" . 
-            "  - Fecha de resolución del trámite: " . $this -> getFechaResolucion() . "\n" . 
-            "  - Estado del trámite: " . $this -> getestadoTramite() . "\n" . 
-            "  - Cliente Solicitante del trámite: " . $this -> getClienteSolicitante() -> getNombre() . " " . 
-            $this -> getClienteSolicitante() -> getApellido() . "\n";
-            return $impresion;
+            $cadena = "\n" . "  - Tipo de trámite: " . $this -> getTipoTramite() . 
+            "\n" . "  - Hora de creación del trámite: " . $this -> getHoraCreacion() . 
+            "\n" . "  - Hora de resolución del trámite: " . $this -> getHoraResolucion() . 
+            "\n" . "  - Fecha de creación del trámite: " . $this -> getFechaCreacion() . 
+            "\n" . "  - Fecha de resolución del trámite: " . $this -> getFechaResolucion() . 
+            "\n" . "  - Estado del trámite: " . $this -> getestadoTramite() . 
+            "\n" . "  - Cliente Solicitante del trámite: " . $this -> getClienteSolicitante() -> getNombre() . " " . 
+            $this -> getClienteSolicitante() -> getApellido();
+            return $cadena;
         }
 
     }

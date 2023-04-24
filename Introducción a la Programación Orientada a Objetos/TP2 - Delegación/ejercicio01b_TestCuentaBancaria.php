@@ -1,6 +1,6 @@
 <?php
-    include 'ejercicio01b - cuentaBancaria.php';
-    include 'ejercicio01a - persona.php';
+    include_once ("ejercicio01b_CuentaBancaria.php");
+    include_once ("ejercicio01a_Persona.php");
 
     $persona1 = new Persona("Fede", "Hache", "Hombre", 19182833);
 

@@ -1,8 +1,8 @@
 <?php
 
-    include 'ejercicio04 - lectura.php';
-    include 'ejercicio03 - libro.php';
-    include 'ejercicio01a - persona.php';
+    include_once ("ejercicio04_Lectura.php");
+    include_once ("ejercicio03_Libro.php");
+    include_once ("ejercicio01a_Persona.php");
 
     $persona1 = new Persona("J. K.", "Rowling", "Mujer", 19182833);
 
@@ -11,28 +11,58 @@
     $anioEdicion1 = 1998;
     $editorial1 = "Salamandra";
     $cantPag1 = 256;
-    $sinopsis1 = "Harry es húerfano de padre y madre y vive con sus tíos odiosos y su primo insoportable y malcriado. Por suerte Harry puede ir a un colegio especial de magia. Ágil y divertida, esta novela entretiene a grandes y chicos.";
+    $sinopsis1 = "La piedra filosofal y Harry";
 
     $libro1 = new Libro($isbn1, $titulo1, $anioEdicion1, $editorial1, $cantPag1, $sinopsis1, $persona1);
  
     $lectura1 = new Lectura ($libro1, 200);
 
-    echo $lectura1;
+    echo $lectura1 . "\n";
 
-    $lectura1 -> siguientePagina();
+    $comprobacion = $lectura1 -> siguientePagina();
+    if ($comprobacion == true) {
+        echo "\n" . "Se avanzó a la siguiente página correctamente. \n";
+    } else {
+        echo "\n" . "Ha llegado a la última página del libro, no se puede avanzar más. \n";
+    }
 
-    echo $lectura1;
+    echo $lectura1 . "\n";
 
-    $lectura1 -> irPagina(256);
+    $comprobacion = $lectura1 -> irPagina(256);
+    if ($comprobacion == true) {
+        echo "\n" . "Se avanzo a la pagina seleccionada correctamente. \n";
+    } else {
+        echo "\n" . "Ha ingresado un número de página no válido para el libro. \n";
+    }
 
-    $lectura1 -> siguientePagina();
+    $comprobacion = $lectura1 -> siguientePagina();
+    if ($comprobacion == true) {
+        echo "\n" . "Se avanzó a la siguiente página correctamente. \n";
+    } else {
+        echo "\n" . "Ha llegado a la última página del libro, no se puede avanzar más. \n";
+    }
 
-    $lectura1 -> recrocederPagina();
+    $comprobacion = $lectura1 -> recrocederPagina();
+    if ($comprobacion == true) {
+        echo "\n" . "Se retrocedió a la anterior página correctamente. \n";
+    } else {
+        echo "\n" . "Está leyendo la primera página del libro, no puede retroceder más. \n";
+    }
 
-    echo $lectura1;
+    echo $lectura1 . "\n";
 
-    $lectura1 -> irPagina(1);
+    $comprobacion = $lectura1 -> irPagina(1);
+    if ($comprobacion == true) {
+        echo "\n" . "Se avanzo a la pagina seleccionada correctamente. \n";
+    } else {
+        echo "\n" . "Ha ingresado un número de página no válido para el libro. \n";
+    }
 
-    $lectura1 -> recrocederPagina();
+    $comprobacion = $lectura1 -> recrocederPagina();
+    if ($comprobacion == true) {
+        echo "\n" . "Se retrocedió a la anterior página correctamente. \n";
+    } else {
+        echo "\n" . "Está leyendo la primera página del libro, no puede retroceder más. \n";
+    }
 
 ?>

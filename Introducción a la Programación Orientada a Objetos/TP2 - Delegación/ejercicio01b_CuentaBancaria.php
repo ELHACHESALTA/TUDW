@@ -62,12 +62,11 @@
         }
 
         public function __toString() {
-            $impresion = "Número de Cuenta: " . $this -> getNumeroCuenta() . "\n" . 
-            "Información del cliente: \n" . 
-            $this -> getPersona() . "\n" . 
-            "Saldo Actual: " . $this -> getSaldoActual() . "\n" . 
-            "Interes Anual: " . $this -> getInteresAnual() . "\n";
-            return $impresion;
+            $cadena = "\n" . "Número de Cuenta: " . $this -> getNumeroCuenta() . 
+            "\n" . "Información del cliente: " . $this -> getPersona() . 
+            "\n" . "Saldo Actual: " . $this -> getSaldoActual() . 
+            "\n" . "Interes Anual: " . $this -> getInteresAnual();
+            return $cadena;
         }
 
     }

@@ -1,10 +1,10 @@
 <?php
 
-    include 'ejercicio01a - persona.php';
-    include 'ejercicio06 - tramite.php';
-    include 'ejercicio06 - cliente.php';
-    include 'ejercicio06 - mostrador.php';
-    include 'ejercicio06 - banco.php';
+    include_once ("ejercicio01a_Persona.php");
+    include_once ("ejercicio06_Tramite.php");
+    include_once ("ejercicio06_Cliente.php");
+    include_once ("ejercicio06_Mostrador.php");
+    include_once ("ejercicio06_Banco.php");
 
     //Creación de objetos de tipo Persona
 
@@ -35,29 +35,20 @@
 
     //Creación de objetos de tipo Mostrador
 
-    $filaClientes = [];
+    $tipoTramiteMostrador1 = ["Extraccion", "Deposito"];
+    $tipoTramiteMostrador2 = ["Deposito", "Prestamo"];
+    $tipoTramiteMostrador3 = ["Prestamo"];
 
-    $tipoTramiteMostrador1[0] = "Extraccion";
-    $tipoTramiteMostrador1[1] = "Deposito";
-    $tipoTramiteMostrador2[0] = "Deposito";
-    $tipoTramiteMostrador2[1] = "Prestamo";
-    $tipoTramiteMostrador3[0] = "Prestamo";
-
-    $mostrador1 = new Mostrador ("Mostrador 1", $tipoTramiteMostrador1, 1, $filaClientes);
-    $mostrador2 = new Mostrador ("Mostrador 2", $tipoTramiteMostrador1, 2, $filaClientes);
-    $mostrador3 = new Mostrador ("Mostrador 3", $tipoTramiteMostrador2, 3, $filaClientes);
-    $mostrador4 = new Mostrador ("Mostrador 4", $tipoTramiteMostrador2, 4, $filaClientes);
-    $mostrador5 = new Mostrador ("Mostrador 5", $tipoTramiteMostrador3, 5, $filaClientes);
-    $mostrador6 = new Mostrador ("Mostrador 6", $tipoTramiteMostrador3, 6, $filaClientes);
+    $mostrador1 = new Mostrador ("Mostrador 1", $tipoTramiteMostrador1, 1, []);
+    $mostrador2 = new Mostrador ("Mostrador 2", $tipoTramiteMostrador1, 2, []);
+    $mostrador3 = new Mostrador ("Mostrador 3", $tipoTramiteMostrador2, 3, []);
+    $mostrador4 = new Mostrador ("Mostrador 4", $tipoTramiteMostrador2, 4, []);
+    $mostrador5 = new Mostrador ("Mostrador 5", $tipoTramiteMostrador3, 5, []);
+    $mostrador6 = new Mostrador ("Mostrador 6", $tipoTramiteMostrador3, 6, []);
 
     //Creación de objetos de tipo Banco
 
-    $arregloMostradores[0] = $mostrador1;
-    $arregloMostradores[1] = $mostrador2;
-    $arregloMostradores[2] = $mostrador3;
-    $arregloMostradores[3] = $mostrador4;
-    $arregloMostradores[4] = $mostrador5;
-    $arregloMostradores[5] = $mostrador6;
+    $arregloMostradores = [$mostrador1, $mostrador2, $mostrador3, $mostrador4, $mostrador5, $mostrador6];
     $banco1 = new Banco($arregloMostradores);
 
     //Prueba de funciones de objetos de tipo Banco

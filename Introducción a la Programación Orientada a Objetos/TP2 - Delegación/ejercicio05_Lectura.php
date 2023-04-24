@@ -26,17 +26,6 @@
             $this -> librosLeidos = $librosLeidosNuevo;
         }
 
-        public function leerLibroNuevo($libroLLN) {
-            if ($this -> libroLeido($libroLLN -> getTitulo()) == false) {
-                $arregloLibros = $this -> getLibrosLeidos();
-                array_push($arregloLibros, $libroLLN);
-                $this -> setLibrosLeidos($arregloLibros);
-                $this -> setLibro($libroLLN);
-            } else {
-                echo "El libro ingresado ya ha sido leido, ingrese otro. \n";
-            }
-        }
-
         public function libroLeido($titulo) {
             $comprobacion = false;
             $arregloLibros = $this -> getLibrosLeidos();
@@ -96,15 +85,25 @@
             return $listaLibros;
         }
 
-        public function __toString() {
-            $listaLibrosLeidos = "";
+        public function stringLibros() {
+            $listaLibrosLeidos = "\n";
             for ($i = 0; $i < count($this -> getLibrosLeidos()); $i++) {
-                $listaLibrosLeidos = $listaLibrosLeidos . "  - " . $this -> getLibrosLeidos()[$i] -> getTitulo() . "\n";
+                if ($i < (count($this -> getLibrosLeidos()) - 1)) {
+                    $listaLibrosLeidos = $listaLibrosLeidos . "  - " . $this -> getLibrosLeidos()[$i] -> getTitulo() . "\n";
+                } else {
+                    $listaLibrosLeidos = $listaLibrosLeidos . "  - " . $this -> getLibrosLeidos()[$i] -> getTitulo();
+                }
             }
-            $impresion = "\n" . "Información del Libro: \n" . 
-            $this -> getLibro() . 
-            "Libros leidos: \n" . $listaLibrosLeidos . "\n";
-            return $impresion;
+            if ($listaLibrosLeidos == "\n") {
+                $listaLibrosLeidos = $listaLibrosLeidos . " - No hay libros leídos aún.";
+            }
+            return $listaLibrosLeidos;
+        }
+
+        public function __toString() {
+            $cadena = "\n" . "Información del Libro: " . $this -> getLibro() . 
+            "\n" . "Libros leidos: " . $this -> stringLibros();
+            return $cadena;
         }
 
     }

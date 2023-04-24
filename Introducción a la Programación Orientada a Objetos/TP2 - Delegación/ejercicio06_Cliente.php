@@ -27,11 +27,9 @@
         }
 
         public function __toString() {
-            $impresion = "\n" . "Datos del Cliente: \n" . 
-            $this -> getObjPersona() . "\n" . 
-            "Datos del Trámite: \n" . 
-            $this -> getObjTramite();
-            return $impresion;
+            $cadena = "\n" . "Datos del Cliente: " . $this -> getObjPersona() . 
+            "\n" . "Datos del Trámite: " . $this -> getObjTramite();
+            return $cadena;
         }
 
     }

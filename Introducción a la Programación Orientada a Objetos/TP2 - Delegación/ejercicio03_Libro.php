@@ -91,14 +91,14 @@
         }
 
         public function __toString() {
-            $impresion = "ISNB: " . $this -> getIsbn() . "\n" . 
-            "Titulo: " . $this -> getTitulo() . "\n" . 
-            "Año de Edición: " . $this -> getAnioEdicion() . "\n" . 
-            "Editorial: " . $this -> getEditorial() . "\n" . 
-            "Cantidad de Páginas: " . $this -> getCantPag() . "\n" . 
-            "Sinopsis: " . $this -> getSinopsis() . "\n" . 
-            "Información del Autor: \n" . $this -> getAutor() . "\n";
-            return $impresion;
+            $cadena = "\n" . "ISNB: " . $this -> getIsbn() . 
+            "\n" . "Titulo: " . $this -> getTitulo() . 
+            "\n" . "Año de Edición: " . $this -> getAnioEdicion() . 
+            "\n" . "Editorial: " . $this -> getEditorial() . 
+            "\n" . "Cantidad de Páginas: " . $this -> getCantPag() . 
+            "\n" . "Sinopsis: " . $this -> getSinopsis() . 
+            "\n" . "Información del Autor: " . $this -> getAutor();
+            return $cadena;
         }
 
     }

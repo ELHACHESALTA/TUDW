@@ -52,11 +52,11 @@
         }
 
         public function __toString() {
-            $impresion = " - Nombre de la función: " . $this -> getNombreFuncion() . 
+            $cadena = "\n" . " - Nombre de la función: " . $this -> getNombreFuncion() . 
             "\n" . " - Horario de inicio: " . $this -> getHorarioInicio() . 
             "\n" . " - Duración de la obra: " . $this -> getDuracionObra() . 
-            "\n" . " - Precio: " . $this -> getPrecio() . "\n";
-            return $impresion;
+            "\n" . " - Precio: " . $this -> getPrecio();
+            return $cadena;
         }
 
     }

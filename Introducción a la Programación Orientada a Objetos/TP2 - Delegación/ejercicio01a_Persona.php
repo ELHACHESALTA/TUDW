@@ -47,11 +47,11 @@
         }
 
         public function __toString() {
-            $impresion = "  - Nombre: " . $this -> getNombre() . "\n" . 
-            "  - Apellido: " . $this -> getApellido() . "\n" . 
-            "  - Tipo: " . $this -> getTipo() . "\n" . 
-            "  - DNI: " . $this -> getDni();
-            return $impresion;
+            $cadena = "\n" . "  - Nombre: " . $this -> getNombre() . 
+            "\n" . "  - Apellido: " . $this -> getApellido() . 
+            "\n" . "  - Tipo: " . $this -> getTipo() . 
+            "\n" . "  - DNI: " . $this -> getDni();
+            return $cadena;
         }
 
     }

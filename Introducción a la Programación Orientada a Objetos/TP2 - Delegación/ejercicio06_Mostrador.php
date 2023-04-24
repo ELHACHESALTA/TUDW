@@ -60,24 +60,45 @@
             return $comprobacion;
         }
 
-        public function __toString() {
-            $datosClientes = "";
+        public function stringClientes() {
+            $datosClientes = "\n";
             for ($i = 0; $i < count($this -> getColaDeClientes()); $i++) {
-                $datosClientes = $datosClientes . " - " . $this -> getColaDeClientes()[$i] -> getObjPersona() -> getNombre() . " " . 
-                $this -> getColaDeClientes()[$i] -> getObjPersona() -> getApellido() . "\n";
+                if ($i < (count($this -> getColaDeClientes()) - 1)) {
+                    $datosClientes = $datosClientes . " - " . $this -> getColaDeClientes()[$i] -> getObjPersona() -> getNombre() . " " . 
+                    $this -> getColaDeClientes()[$i] -> getObjPersona() -> getApellido() . "\n";
+                } else {
+                    $datosClientes = $datosClientes . " - " . $this -> getColaDeClientes()[$i] -> getObjPersona() -> getNombre() . " " . 
+                    $this -> getColaDeClientes()[$i] -> getObjPersona() -> getApellido();
+                }
+
             }
-            if ($datosClientes == "") {
-                $datosClientes = " - No hay clientes en la cola. \n";
+            if ($datosClientes == "\n") {
+                $datosClientes = $datosClientes . " - No hay clientes en la cola.";
             }
-            $stringTramites = "";
+            return $datosClientes;
+        }
+
+        public function stringTramites() {
+            $stringTramites = "\n";
             for ($i = 0; $i < count($this -> getTipoTramiteMostrador()); $i++) {
-                $stringTramites = $stringTramites . " - " . $this -> getTipoTramiteMostrador() [$i];
+                if ($i < (count($this -> getTipoTramiteMostrador()) - 1)) {
+                    $stringTramites = $stringTramites . " - " . $this -> getTipoTramiteMostrador() [$i] . "\n";
+                } else {
+                    $stringTramites = $stringTramites . " - " . $this -> getTipoTramiteMostrador() [$i];
+                }
             }
-            $impresion = "\n" . " - Nombre del Mostrador: " . $this -> getNombreMostrador() . "\n" . 
-            " - Tipos de trámites del mostrador: \n  " . $stringTramites . "\n" . 
-            " - Máximo de clientes en la cola: " . $this -> getMaxCola() . "\n" . 
-            " - Clientes en la cola: \n" . $datosClientes;
-            return $impresion;
+            if ($stringTramites == "\n") {
+                $stringTramites = $stringTramites . " - No hay tramites en la cola.";
+            }
+            return $stringTramites;
+        }
+
+        public function __toString() {
+            $cadena = "\n" . " - Nombre del Mostrador: " . $this -> getNombreMostrador() . 
+            "\n" . " - Tipos de trámites del mostrador: " . $this -> stringTramites() . 
+            "\n" . " - Máximo de clientes en la cola: " . $this -> getMaxCola() . 
+            "\n" . " - Clientes en la cola: " . $this -> stringClientes();
+            return $cadena;
         }
 
     }

@@ -1,8 +1,8 @@
 <?php
 
-    include 'ejercicio05 - lectura.php';
-    include 'ejercicio03 - libro.php';
-    include 'ejercicio01a - persona.php';
+    include_once ("ejercicio05_Lectura.php");
+    include_once ("ejercicio03_Libro.php");
+    include_once ("ejercicio01a_persona.php");
 
     //Creación de objetos de clase Persona (autores)
 
@@ -91,14 +91,14 @@
             $lecturaLLN -> setLibrosLeidos($arregloLibros);
             $lecturaLLN -> setLibro($libroLLN);
         } else {
-            echo " - El libro ingresado ya ha sido leido, ingrese otro. \n";
+            echo "  - El libro ingresado ya ha sido leido, ingrese otro. \n";
         }
     }
 
     //Test
 
     echo "\n" . "Se ingresa un libro repetido: \n";
-    leerLibroNuevo($libro1, $lectura1);
+    echo leerLibroNuevo($libro1, $lectura1);
 
     echo "\n" . "Se ingresan 7 libros a lectura. \n";
     leerLibroNuevo($libro2, $lectura1);
@@ -110,7 +110,7 @@
     leerLibroNuevo($libro8, $lectura1);
 
     echo "\n" . "Sinopsis del libro: Harry Potter y la piedra filosofal: \n";
-    echo " - " . $lectura1 -> darSinopsis("Harry Potter y la piedra filosofal") . "\n";
+    echo "  - " . $lectura1 -> darSinopsis("Harry Potter y la piedra filosofal") . "\n";
 
     echo "\n" . "Los libros leidos con edición en el año 2006 son: \n";
     echo $lectura1 -> leidosAnioEdicion(2006);
@@ -120,5 +120,7 @@
 
     echo "\n" . "Los libros leidos del autor Miguel De Cervantes son: \n";
     echo $lectura1 -> darLibrosPorAutor("Miguel De Cervantes");
+
+    echo $lectura1;
 
 ?>
