@@ -35,10 +35,10 @@
 
 - #### HTML
 
-    - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP1%20-%20HTML%20Introducci%C3%B3n)
-    - [Trabajo Práctico N°2 - Tablas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP2%20-%20HTML%20Tablas)
-    - [Trabajo Práctico N°3 - Formularios](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP3%20-%20HTML%20Formularios)
-    - [Trabajo Práctico N°4 - Iframes y Multimedia](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP4%20-%20HTML%20Iframes%20y%20Multimedia)
+    - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/1%20HTML%20-%20TP1%20Introducci%C3%B3n)
+    - [Trabajo Práctico N°2 - Tablas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/1%20HTML%20-%20TP2%20Tablas)
+    - [Trabajo Práctico N°3 - Formularios](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/1%20HTML%20-%20TP3%20Formularios)
+    - [Trabajo Práctico N°4 - Iframes y Multimedia](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/1%20HTML%20-%20TP4%20Iframes%20y%20Multimedia)
 
 - #### CSS
 
