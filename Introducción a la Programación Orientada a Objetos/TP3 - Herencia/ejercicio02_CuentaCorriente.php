@@ -5,7 +5,7 @@
         private $maxDescubierto;
 
         public function __construct ($numeroCuentaC, $saldoC, $objDuenioC, $maxDescubiertoC) {
-            parent::__construct($numeroCuentaC, $saldoC, $objDuenioC);
+            parent :: __construct($numeroCuentaC, $saldoC, $objDuenioC);
             $this -> maxDescubierto = $maxDescubiertoC;
         }
 
@@ -29,7 +29,7 @@
         }
 
         public function __toString() {
-            $cadena = parent::__toString();
+            $cadena = parent :: __toString();
             $cadena = $cadena . "\n" . "Descubierto de la cuenta: " . $this -> getMaxDescubierto();
             return $cadena;
         }

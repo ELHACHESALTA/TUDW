@@ -159,7 +159,6 @@
             if ($cadenaCuentasCorrientes == "\n") {
                 $cadenaCuentasCorrientes = $cadenaCuentasCorrientes . "No hay cuentas corrientes en el banco.";
             }
-
             return $cadenaCuentasCorrientes;
         }
 
@@ -176,7 +175,6 @@
             if ($cadenaCajasAhorro == "\n") {
                 $cadenaCajasAhorro = $cadenaCajasAhorro . "No hay cajas de ahorro en el banco.";
             }
-
             return $cadenaCajasAhorro;
         }
 
@@ -193,7 +191,6 @@
             if ($cadenaClientes == "\n") {
                 $cadenaClientes = $cadenaClientes . "No hay clientes en el banco.";
             }
-
             return $cadenaClientes;
         }
 

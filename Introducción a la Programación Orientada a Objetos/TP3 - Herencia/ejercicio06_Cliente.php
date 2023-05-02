@@ -5,8 +5,8 @@
         private static $nroContador = 1;
         private $nro;
 
-        public function __construct ($dniC, $nombreC, $apellidoC) {
-            parent :: __construct($dniC, $nombreC, $apellidoC);
+        public function __construct($tipoDocC, $numDocC, $nombreC, $apellidoC) {
+            parent :: __construct($tipoDocC, $numDocC, $nombreC, $apellidoC);
             $this -> nro = Cliente :: $nroContador++;
         }
 
@@ -19,7 +19,7 @@
         }
 
         public function __toString() {
-            $cadena = parent :: __toString();
+            $cadena = parent::__toString();
             $cadena = $cadena . "\n" . "Número del cliente: " . $this -> getNro();
             return $cadena;
         }
