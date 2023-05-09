@@ -214,51 +214,22 @@
             return $colTotalProductosVendidos;
         }
 
-        /*
-        public function colTotalCodigosVentas($anio) {
-            $colTotalCodigosVentas = [];
-            $colTotalProductosVendidos = $this -> colTotalProductosVendidos($anio);
-            for ($i = 0; $i < count($colTotalProductosVendidos); $i++) {
-                if ($colTotalCodigosVentas == []) {
-                    array_push($colTotalCodigosVentas, $colTotalProductosVendidos[$i] -> getCodigoBarra());
-                } else {
-                    for ($j = 0; $j < count($colTotalCodigosVentas); $j++) {
-                        $comprobacion = true;
-                        if ($colTotalCodigosVentas[$j] == $colTotalProductosVendidos[$i] -> getCodigoBarra()) {
-                            $comprobacion = false;
-                        }
-                    }
-                    if ($comprobacion == true) {
-                        array_push($colTotalCodigosVentas, $colTotalProductosVendidos[$i] -> getCodigoBarra());
-                    }
-                }
-            }
-            return $colTotalCodigosVentas;
-        }
-        */
-
         public function contarProductosVendidos($anio) {
+            $contarProductos = [];
+            $indiceContarProductos = 0;
             $productosVendidos = $this -> colTotalProductosVendidos($anio);
-            $contadorProductosVendidos = [];
             for ($i = 0; $i < count($productosVendidos); $i++) {
-                if ($contadorProductosVendidos == []) {
-                    array_push($contadorProductosVendidos, $productosVendidos[$i]);
-                } else {
-                    for ($j = 0; $j < count($contadorProductosVendidos); $j++) {
-                        $comprobacion = true;
-                        if ($contadorProductosVendidos[$j] -> getCodigoBarra() == $productosVendidos[$i] -> getCodigoBarra()) {
-                            $stockCarga = $contadorProductosVendidos[$j] -> getStock();
-                            $stockCarga++;
-                            $contadorProductosVendidos[$j] -> setStock($stockCarga);
-                            $comprobacion = false;
-                        }
-                    }
-                    if ($comprobacion == true) {
-                        array_push($contadorProductosVendidos, $productosVendidos[$i]);
+                $contadorProductos = 0;
+                foreach ($productosVendidos as $value) {
+                    if ($productosVendidos[$i] == $value) {
+                        $contadorProductos++;
                     }
                 }
+                $contarProductos[$indiceContarProductos]["cantidad"] = $contadorProductos;
+                $contarProductos[$indiceContarProductos]["producto"] = $productosVendidos[$i];
+                $indiceContarProductos++;
             }
-            return $contadorProductosVendidos;
+            return $contarProductos;
         }
 
         public function informarProductosMasVendidos($anio, $n) {
@@ -268,18 +239,19 @@
                 $n = count($productosVendidos);
             }
             for ($i = 0; $i < $n; $i++) {
-                $stockMaximo = PHP_INT_MIN;
+                $maxCantVendidos = PHP_INT_MIN;
                 $productoVendidoMayor = "";
-                $indiceMayor = PHP_INT_MIN;
                 for ($j = 0; $j < count($productosVendidos); $j++) {
-                    if ($productosVendidos[$j] -> getStock() > $stockMaximo) {
-                        $stockMaximo = $productosVendidos[$j] -> getStock();
-                        $productoVendidoMayor = $productosVendidos[$j];
-                        $indiceMayor = $j;
+                    for($k = 0; $k < count($productosVendidosOrdenados); $k++) {
+                        if ($productosVendidosOrdenados[$k] == $productoVendidoMayor) {
+                            if ($productosVendidos[$j]["cantidad"] > $maxCantVendidos) {
+                                $maxCantVendidos = $productosVendidos[$j]["cantidad"];
+                                $productoVendidoMayor = $productosVendidos[$j];
+                                $indiceMayor = $j;
+                            }
+                        }
                     }
                 }
-                unset($productosVendidos[$indiceMayor]);
-                $productosVendidos = array_values($productosVendidos);
                 array_push($productosVendidosOrdenados, $productoVendidoMayor);
             }
             return $productosVendidosOrdenados;
