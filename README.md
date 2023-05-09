@@ -29,6 +29,7 @@
 - [Trabajo Práctico N°0 - Repaso PHP](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP0%20-%20Repaso%20PHP)
 - [Trabajo Práctico N°1 - Clases](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP1%20-%20Clases)
 - [Trabajo Práctico N°2 - Delegación](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP2%20-%20Delegaci%C3%B3n)
+- [Trabajo Práctico N°3 - Herencia](https://github.com/ELHACHESALTA/TUDW/tree/main/Introducci%C3%B3n%20a%20la%20Programaci%C3%B3n%20Orientada%20a%20Objetos/TP3%20-%20Herencia)
 - [Trabajos Prácticos Entregables](https://github.com/ELHACHESALTA/Entregables_IPOO_2023)
 
 ### Materia: Programación Estática y Laboratorio Web (PEyLW)
