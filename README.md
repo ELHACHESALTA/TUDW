@@ -45,3 +45,4 @@
 
     - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP1%20Introducci%C3%B3n)
     - [Trabajo Práctico N°2 - Selectores y unidades de medida](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP2%20Selectores%20y%20unidades%20de%20medida)
+    - [Trabajo Práctico N°3 - Modelo de cajas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP3%20Modelo%20de%20cajas)
