@@ -47,3 +47,4 @@
     - [Trabajo Práctico N°2 - Selectores y unidades de medida](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP2%20Selectores%20y%20unidades%20de%20medida)
     - [Trabajo Práctico N°3 - Modelo de cajas](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP3%20Modelo%20de%20cajas)
     - [Trabajo Práctico N°4 - Visualización y posicionamiento](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP4%20Visualizaci%C3%B3n%20y%20posicionamiento)
+    - [Trabajo Práctico N°5 - Posicionamiento flotante](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/2%20CSS%20-%20TP5%20Elementos%20flotantes)
