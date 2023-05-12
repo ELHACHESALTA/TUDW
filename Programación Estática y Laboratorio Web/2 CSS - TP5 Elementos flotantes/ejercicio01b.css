@@ -1,0 +1,42 @@
+* {
+    overflow: hidden;
+}
+
+.top {
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 50px;
+}
+
+.izq {
+    float: left;
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    width: 200px;
+    padding: 20px 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    height: 500px;
+}
+
+.cen {
+    float: left;
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    width: calc(100% - 300px);
+    padding: 20px 10px;
+    margin: 10px;
+    margin-bottom: 20px;
+    height: 500px;
+    text-align: center;
+}
+
+.pie {
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 50px;
+}

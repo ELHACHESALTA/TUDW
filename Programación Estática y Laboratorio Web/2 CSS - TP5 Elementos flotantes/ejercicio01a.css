@@ -1,0 +1,41 @@
+.top {
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 50px;
+}
+
+.izq {
+    position: relative;
+    float: left;
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    width: 100px;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 500px;
+}
+
+.cen {
+    position: relative;
+    float: left;
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    width: calc(100% - 350px);
+    padding: 20px 10px;
+    margin: 10px;
+    height: 500px;
+    text-align: center;
+}
+
+.der {
+    position: relative;
+    float: left;
+    background-color: #666666;
+    border: 5px solid #CBCBCB;
+    width: 100px;
+    padding: 20px 10px;
+    margin: 10px;
+    height: 500px;
+}
