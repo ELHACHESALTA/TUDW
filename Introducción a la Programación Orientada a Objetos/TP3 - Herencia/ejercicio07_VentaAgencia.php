@@ -13,6 +13,11 @@
             return $importeFinal;
         }
 
+        public function __toString() {
+            $cadena = parent :: __toString();
+            return $cadena;
+        }
+
     }
 
 ?>
