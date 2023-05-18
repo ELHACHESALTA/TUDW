@@ -34,6 +34,8 @@
 
 ### Materia: Programación Estática y Laboratorio Web (PEyLW)
 
+- [Parciales](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/Parciales/)
+
 - #### HTML
 
     - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/1%20HTML%20-%20TP1%20Introducci%C3%B3n)
