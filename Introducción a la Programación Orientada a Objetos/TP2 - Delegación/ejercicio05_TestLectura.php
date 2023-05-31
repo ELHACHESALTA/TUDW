@@ -79,7 +79,7 @@
     $libro8 = new Libro($isbn8, $titulo8, $anioEdicion8, $editorial8, $cantPag8, $sinopsis8, $autor2);
 
     //Creación de objetos de la clase Lectura
- 
+
     $lectura1 = new Lectura ($libro1, 1);
 
     //Funciones

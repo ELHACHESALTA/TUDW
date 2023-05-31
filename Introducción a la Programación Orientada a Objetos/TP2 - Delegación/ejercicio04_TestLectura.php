@@ -14,7 +14,7 @@
     $sinopsis1 = "La piedra filosofal y Harry";
 
     $libro1 = new Libro($isbn1, $titulo1, $anioEdicion1, $editorial1, $cantPag1, $sinopsis1, $persona1);
- 
+
     $lectura1 = new Lectura ($libro1, 200);
 
     echo $lectura1 . "\n";

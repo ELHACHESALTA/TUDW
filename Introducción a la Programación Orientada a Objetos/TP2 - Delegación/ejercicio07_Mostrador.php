@@ -112,9 +112,9 @@
                 $fechaTramiteCerrado = strtotime($totalTramitesCerrados[$i] -> getFechaResolucion());
                 $primerDiaMes = strtotime("01." . $mesTC . ".2023");
                 $ultimoDiaMes = strtotime("30." . $mesTC . ".2023");
-	            if (($fechaTramiteCerrado >= $primerDiaMes) && ($fechaTramiteCerrado <= $ultimoDiaMes)) {
-		            array_push($colaTramitesCerradosMes, $totalTramitesCerrados[$i]);
-	            }
+                if (($fechaTramiteCerrado >= $primerDiaMes) && ($fechaTramiteCerrado <= $ultimoDiaMes)) {
+                    array_push($colaTramitesCerradosMes, $totalTramitesCerrados[$i]);
+                }
             }
             return $colaTramitesCerradosMes;
         }
