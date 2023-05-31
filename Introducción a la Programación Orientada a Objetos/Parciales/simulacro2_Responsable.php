@@ -17,7 +17,7 @@
             $this -> mail = $mailC;
             $this -> telefono = $telefonoC;
         }
- 
+
         public function getNombre() {
             return $this -> nombre;
         }
@@ -75,8 +75,6 @@
             "\n" . "Teléfono del responsable: " . $this -> getTelefonO();
             return $cadena;
         }
-
-
 
     }
 

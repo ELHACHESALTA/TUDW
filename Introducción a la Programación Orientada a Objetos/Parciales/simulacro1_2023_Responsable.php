@@ -140,7 +140,7 @@
             "\n" . "Teléfono del responsable: " . $this -> getTelefono();
             return $cadena;
         }
- 
+
     }
 
 ?>
