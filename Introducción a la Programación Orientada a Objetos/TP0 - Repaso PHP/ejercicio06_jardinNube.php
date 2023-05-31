@@ -22,7 +22,7 @@
             $diferenciaAnio--;
         }
         return $diferenciaAnio;
-      }
+    }
 
     /**
      * Selecciona la salida del alumno a partir de su sexo.
