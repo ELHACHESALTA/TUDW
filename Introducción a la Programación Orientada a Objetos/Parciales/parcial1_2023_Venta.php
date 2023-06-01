@@ -56,6 +56,15 @@
             $this -> precioFinal = $precioFinalNuevo;
         }
 
+        public function incorporarBicicleta($objBici) {
+            $colObjBicicletasCarga = $this -> getColObjBicicletas();
+            array_push ($colObjBicicletasCarga, $objBici);
+            $this -> setColObjBicicletas($colObjBicicletasCarga);
+            $precioFinalCarga = $this -> getPrecioFinal();
+            $precioFinalCarga = $precioFinalCarga + $objBici -> darPrecioVenta();
+            $this -> setPrecioFinal($precioFinalCarga);
+        }
+
         public function stringColObjBicicletas() {
             $stringBicis = "\n";
             $colBicicletas = $this -> getColObjBicicletas();

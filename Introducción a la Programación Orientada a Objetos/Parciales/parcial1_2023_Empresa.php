@@ -57,7 +57,7 @@
         }
 
         public function retornarBici($codigoBici) {
-            $bicicletaElegida = "";
+            $bicicletaElegida = null;
             $comprobacion = false;
             $i = 0;
             $colBicicletas = $this -> getColObjBicicletas();
@@ -77,10 +77,10 @@
             $colBicisEmpresa = $this -> getColObjBicicletas();
             $colVentasEmpresa = $this -> getColObjVentas();
             $totalVentasEmpresa = count($colVentasEmpresa);
-            $bicisVendidas = [];
             // Comprueba que el cliente no este dado de baja.
             if ($objCliente -> getDadoDeBaja() == false) {
                 // Recorre exhaustivamente el arreglo de códigos de bicicletas que se solicitan para la venta.
+                $ventaNueva = new Venta ($totalVentasEmpresa + 1, date("d/m/Y"), $objCliente, [], 0);
                 for ($i = 0; $i < count($colCodigosBici); $i++) { 
                     $j = 0;
                     $comprobacion = true;
@@ -88,19 +88,15 @@
                     while ($j < count($colBicisEmpresa) && $comprobacion) {
                         // Busca si la bici solicitada pertenece al arreglo de bicicletas de la empresa y si se encuentra activa para la venta
                         if ($colCodigosBici[$i] == $colBicisEmpresa[$j] -> getCodigo() && $colBicisEmpresa[$j] -> getActiva()) {
-                            // Agrego la bici encontrada al arreglo de bicis vendidas
-                            array_push ($bicisVendidas, $colBicisEmpresa[$j]);
-                            // Suma el importe de la bici vendida al total de la venta
-                            $importeFinalVenta = $importeFinalVenta + $colBicisEmpresa[$j] -> darPrecioVenta();
-                            // Setea la bici vendida como inactiva para que no se vuelva a vender
+                            $ventaNueva -> incorporarBicicleta($colBicisEmpresa[$j]);
+                            $importeFinalVenta = $ventaNueva -> getPrecioFinal();
                             $colBicisEmpresa[$j] -> setActiva(false);
                             $comprobacion = false;
                         }
                         $j++;
                     }
                 }
-                if ($bicisVendidas != []) {
-                    $ventaNueva = new Venta ($totalVentasEmpresa + 1, date("d/m/Y"), $objCliente, $bicisVendidas, $importeFinalVenta);
+                if ($importeFinalVenta != 0) {
                     array_push ($colVentasEmpresa, $ventaNueva);
                     $this -> setColObjVentas($colVentasEmpresa);
                 }
