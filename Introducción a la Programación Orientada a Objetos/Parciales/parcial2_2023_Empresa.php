@@ -115,6 +115,28 @@
             return $colVentasPorCliente;
         }
 
+        public function informarSumaVentasNacionales() {
+            $colVentasEmpresa = $this -> getColObjVentas();
+            $totalVenta = 0;
+            for ($i = 0; $i < count($colVentasEmpresa); $i++) {
+                if($colVentasEmpresa[$i] -> retornarTotalVentaNacional() >= 0) {
+                    $totalVenta = $totalVenta + $colVentasEmpresa[$i] -> retornarTotalVentaNacional();
+                }
+            }
+            return $totalVenta;
+        }
+
+        public function informarVentasImportadas() {
+            $colVentasEmpresa = $this -> getColObjVentas();
+            $colVentas = [];
+            for ($i = 0; $i < count($colVentasEmpresa); $i++) {
+                if ($colVentasEmpresa[$i] -> retornarBicicletasImportadas() != null) {
+                    array_push($colVentas, $colVentasEmpresa[$i]);
+                }
+            }
+            return $colVentas;
+        }
+
         public function stringColObjClientes() {
             $stringClientes = "\n";
             $colClientes = $this -> getColObjClientes();

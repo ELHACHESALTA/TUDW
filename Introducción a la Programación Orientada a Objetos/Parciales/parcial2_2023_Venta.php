@@ -65,6 +65,28 @@
             $this -> setPrecioFinal($precioFinalCarga);
         }
 
+        public function retornarTotalVentaNacional() {
+            $colBicisVenta = $this -> getColObjBicicletas();
+            $totalVenta = 0;
+            for ($i = 0; $i < count($colBicisVenta); $i++) {
+                if (get_class($colBicisVenta[$i]) == "BicicletaNacional") {
+                    $totalVenta = $totalVenta + $colBicisVenta[$i] -> darPrecioVenta();
+                }
+            }
+            return $totalVenta;
+        }
+
+        public function retornarBicicletasImportadas() {
+            $colBicisVenta = $this -> getColObjBicicletas();
+            $colBicisImportadas = [];
+            for ($i = 0; $i < count($colBicisVenta); $i++) {
+                if (get_class($colBicisVenta[$i]) == "BicicletaImportada") {
+                    array_push ($colBicisImportadas, $colBicisVenta[$i]);
+                }
+            }
+            return $colBicisImportadas;
+        }
+
         public function stringColObjBicicletas() {
             $stringBicis = "\n";
             $colBicicletas = $this -> getColObjBicicletas();
@@ -85,7 +107,7 @@
             $cadena = "\n" . "Número de la venta: " . $this -> getNumero() . 
             "\n" . "Fecha de la venta: " . $this -> getFecha() . 
             "\n" . "Datos del cliente de la venta: " . $this -> getObjCliente() . 
-            "\n" . "Datos de las bicicletas de la venta: " . $this -> stringColObjBicicletas() . "\n" .
+            "\n" . "Datos de las bicicletas de la venta: " . $this -> stringColObjBicicletas() . "\n" . 
             "\n" . "Precio final de la venta: " . $this -> getPrecioFinal();
             return $cadena;
         }

@@ -10,7 +10,7 @@
     $objCliente1 = new Cliente ("Fede", "Hache", false, "DNI", 36111111);
     $objCliente2 = new Cliente ("Andre", "Rojo", false, "LC", 36222222);
 
-    //2 - Se crean dos instancias de la clase Bicicletas
+    //2 - Se crean tres instancias de la clase Bicicleta
 
     $objBici1 = new Bicicleta (11, 89500, 2022, "Fire Bird Plegable Cuadro Acero", 85, true);
     $objBici2 = new Bicicleta (12, 310000, 2021, "Bicicleta Trek Marlin 5 Rodado 29 Talle L", 70, true);
