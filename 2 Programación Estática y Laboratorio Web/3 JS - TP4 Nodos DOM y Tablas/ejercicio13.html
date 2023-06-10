@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="ejercicio13.css">
+        <script type="text/javascript" src="ejercicio13.js"></script>
+    </head>
+    <body onload="iniciarTabla()">
+        <h2>Agenda</h2>
+        <hr>
+        <form>
+            nombre <input type="text" id="nombre"><br/>
+            dirección <input type="text" id="direccion"><br/>
+            ciudad <input type="text" id="ciudad"><br/>
+            teléfono <input type="text" id="telefono"><br/>
+            <input type="button" value="Nuevo Registro" onclick="insertarRegistro(
+                document.getElementById('nombre').value,
+                document.getElementById('direccion').value,
+                document.getElementById('ciudad').value,
+                document.getElementById('telefono').value
+            );">
+        </form>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Dirección</th>
+                    <th>Ciudad</th>
+                    <th>Teléfono</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </body>
+</html>
