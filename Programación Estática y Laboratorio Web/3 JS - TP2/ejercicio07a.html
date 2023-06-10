@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <ul>
+            <script type="text/javascript">
+                var meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+                var i;
+                document.write("FOR<br><br>");
+                for (i = 0; i < 12; i++) {
+                    document.write("<li>"+meses[i]+"</li>");
+                }
+                document.write("<br>WHILE<br><br>");
+                i = 0;
+                while(i < 12) {
+                    document.write("<li>"+meses[i]+"</li>");
+                    i++;
+                }
+                document.write("<br>DO WHILE<br><br>");
+                i = 0;
+                do {
+                    document.write("<li>"+meses[i]+"</li>");
+                    i++;
+                } while (i < 12);
+                document.write("<br>FOR IN<br><br>");
+                for (i in meses) {
+                    document.write("<li>"+meses[i]+"</li>");
+                }
+            </script>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function comprobacion() {
+                if (navigator.appCodeName == "Explorer") {
+                    window.location.replace("http://www.microsoft.com/ie");
+                } else if (navigator.appCodeName == "Mozilla") {
+                    window.location.replace("http://www.mozilla.com/firefox");
+                } else if (navigator.appCodeName == "Konqueror") {
+                    indow.location.replace("http://konqueror.org");
+                } else {
+                    document.write("Browser Desconocido");
+                }
+            }
+        </script>
+    </head>
+    <body onload = "comprobacion()">
+    </body>
+</html>
