@@ -53,5 +53,5 @@
 
 - #### JS
 
-    - [Trabajo Práctico N°1](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP1)
-    - [Trabajo Práctico N°2](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP2)
+    - [Trabajo Práctico N°1 - Introducción](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP1%20Introducci%C3%B3n)
+    - [Trabajo Práctico N°2 - Funciones, Condicionales, Bucles, Eventos y DOM](https://github.com/ELHACHESALTA/TUDW/tree/main/Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP2%20Funciones%2C%20Condicionales%2C%20Bucles%2C%20Eventos%20y%20DOM)
