@@ -1,0 +1,39 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var fechaActual = new Date();
+            var fechaParcial = new Date(2023, 6, 23, 18, 0, 0, 0);
+            var dif, miliseg, seg, min, hs, day;
+            document.write("<h2>Fecha y Hora Actual</h2>");
+            document.write(
+                fechaActual.getDate()+"-"+
+                (fechaActual.getMonth()+1)+"-"+ // Javascript en la función date() guarda los meses entre valores 0 y 11 por lo cual hay que tener en cuenta esta corrección.
+                fechaActual.getFullYear()+" "+
+                fechaActual.getHours()+":"+
+                fechaActual.getMinutes()+":"+
+                fechaActual.getSeconds()
+            );
+            document.write("<h2>Faltan para el Parcial</h2>");
+            // Obtengo la diferencia de fechas en milisegundos.
+            dif = fechaParcial.getTime() - fechaActual.getTime();
+            // Obtengo los segundos de la diferencia de fechas.
+            miliseg = dif % 1000;
+            dif -= miliseg;
+            dif /= 1000;
+            seg = dif % 60;
+            // Obtengo los minutos de la diferencia de fechas.
+            dif -= seg;
+            dif /= 60;
+            min = dif % 60;
+            // Obtengo las horas de la diferencia de fechas.
+            dif -= min;
+            dif /= 60;
+            hs = dif % 24;
+            // Obtengo los días de la diferencia de fechas.
+            dif -= hs;
+            dif /= 24;
+            day = dif - 30; // Javascript en la función date() guarda los meses entre valores 0 y 11 por lo cual hay que tener en cuenta esta corrección a la hora de calcular.
+            document.write(day+" Días, "+hs+" Horas, "+min+" Minutos y "+seg+" Segundos.");
+        </script>
+    </body>
+</html>

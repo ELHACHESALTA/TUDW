@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function calcularEdad() {
+                var fechaActual = new Date();
+                var dif, miliseg, seg, min, hs, day, month, year;
+                var dayNac = prompt("Día de nacimiento:", 29);
+                var monthNac = prompt("Mes de nacimiento:", 10);
+                var yearNac = prompt("Año de nacimiento:", 1991);
+                var fechaNacimiento = new Date(yearNac, monthNac, dayNac, 0, 0, 0, 0);
+                // Obtengo la diferencia de fechas en milisegundos.
+                dif = fechaActual.getTime() - fechaNacimiento.getTime();
+                // Obtengo los segundos de la diferencia de fechas.
+                miliseg = dif % 1000;
+                dif -= miliseg;
+                dif /= 1000;
+                seg = dif % 60;
+                // Obtengo los minutos de la diferencia de fechas.
+                dif -= seg;
+                dif /= 60;
+                min = dif % 60;
+                // Obtengo las horas de la diferencia de fechas.
+                dif -= min;
+                dif /= 60;
+                hs = dif % 24;
+                // Obtengo los días de la diferencia de fechas.
+                dif -= hs;
+                dif /= 24;
+                day = (dif - 30) % 365;// Javascript en la función date() guarda los meses entre valores 0 y 11 por lo cual hay que tener en cuenta esta corrección a la hora de calcular.
+                // Obtengo los años de la diferencia de fechas.
+                dif -= day
+                dif /= 365;
+                year = Math.round(dif);
+                document.write("Su edad es de: "+year+" año/s.");
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="calcularEdad()">Calcular Edad</button>
+    </body>
+</html>
