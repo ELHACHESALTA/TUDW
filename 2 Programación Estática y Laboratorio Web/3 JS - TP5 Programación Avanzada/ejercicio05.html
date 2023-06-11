@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var num = prompt("Ingrese una nota:", "");
+            if (0 <= parseInt(num) && parseInt(num) < 3) {
+                document.write("La calificaci&oacute;n es: Muy deficiente.");
+            } else if (3 <= parseInt(num) && parseInt(num) < 5) {
+                document.write("La calificaci&oacute;n es: Insuficiente.");
+            } else if (5 <= parseInt(num) && parseInt(num) < 6) {
+                document.write("La calificaci&oacute;n es: Suficiente.");
+            } else if (6 <= parseInt(num) && parseInt(num) < 7) {
+                document.write("La calificaci&oacute;n es: Bien.");
+            } else if (7 <= parseInt(num) && parseInt(num) < 9) {
+                document.write("La calificaci&oacute;n es: Notable.");
+            } else if (9 <= parseInt(num) && parseInt(num) <= 10) {
+                document.write("La calificaci&oacute;n es: Sobresaliente.");
+            } else {
+                document.write("ERROR: N&uacute;mero inv&aacute;lido o fuera de rango.");
+            };
+        </script>
+    </body>
+</html>

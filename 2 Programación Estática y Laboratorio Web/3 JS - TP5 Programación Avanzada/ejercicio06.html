@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function posicionMouse(event) {
+                var navX = event.clientX; 
+                var navY = event.clientY;
+                var pagX = event.pageX;
+                var pagY = event.pageY;
+                var posicion = document.getElementById("posicion");
+                posicion.innerHTML = 
+                    "Navegador ["+navX+", "+navY+"]<br>"+
+                    "Pagina ["+pagX+", "+pagY+"]<br>";
+            }
+        </script>
+    </head>
+    <body onmousemove="posicionMouse(event)">
+        <h2>Ratón</h2>
+        <div id="posicion"></div>
+    </body>
+</html>

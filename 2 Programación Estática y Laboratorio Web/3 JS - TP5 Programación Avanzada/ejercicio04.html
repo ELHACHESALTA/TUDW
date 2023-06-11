@@ -1,0 +1,19 @@
+<html>
+    <body>
+        <script type="text/javascript">
+            var num = prompt("Ingrese un número:", "");
+            var i, resultado;
+            resultado = true;
+            for (i = 2; i < parseInt(num); i++) {
+                if (parseInt(num) % i == 0 && parseInt(num) != 2) {
+                    resultado = false;
+                }
+            }
+            if (resultado == true) {
+                document.write("El número ingresado es un número primo.");
+            } else {
+                document.write("El número ingresado NO es un número primo.");
+            }
+        </script>
+    </body>
+</html>
