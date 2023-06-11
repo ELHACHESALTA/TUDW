@@ -1,20 +1,18 @@
 <html>
     <body>
-        <div>
-            <script type="text/javascript">
-                var i, n, resultado;
-                for (n = 2; n < 100; n++) {
-                    resultado = true;
-                    for (i = 2; i < n; i++) {
-                        if (n % i == 0 && n != 2) {
-                            resultado = false;
-                        }
-                    }
-                    if (resultado == true) {
-                        document.write(n+" ");
+        <script type="text/javascript">
+            var i, n, resultado;
+            for (n = 2; n < 100; n++) {
+                resultado = true;
+                for (i = 2; i < n; i++) {
+                    if (n % i == 0 && n != 2) {
+                        resultado = false;
                     }
                 }
-            </script>
-        </div>
+                if (resultado == true) {
+                    document.write(n+" ");
+                }
+            }
+        </script>
     </body>
 </html>
