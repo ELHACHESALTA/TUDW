@@ -89,7 +89,7 @@ function validarCamposObligatorios() {
     var nombre = document.getElementById("nombre");
     var apellido = document.getElementById("apellido");
     var obraSocial = document.getElementById("obras_sociales")
-    var expresionRegularNombreApellido = /^([a-zA-Z]+)(\s+([a-zA-Z]+))*$/;
+    var expresionRegularNombreApellido = /^([a-zñüáéíóúA-ZÑÜÁÉÍÓÚ']+)(\s+([a-zñüáéíóúA-ZÑÜÁÉÍÓÚ']+))*$/;
     var resultado;
     if (nombre.value == null || nombre.value.length == 0 || nombre.value.match(/^(\s+)$/) || !(nombre.value.match(expresionRegularNombreApellido))) {
         personalizarCaja(nombre, "2px", "red", "#fea993");
