@@ -58,3 +58,4 @@
     - [Trabajo Práctico N°3 - Objetos](https://github.com/ELHACHESALTA/TUDW/tree/main/2%20Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP3%20Objetos)
     - [Trabajo Práctico N°4 - Nodos DOM y Tablas](https://github.com/ELHACHESALTA/TUDW/tree/main/2%20Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP4%20Nodos%20DOM%20y%20Tablas)
     - [Trabajo Práctico N°5 - Programación Avanzada](https://github.com/ELHACHESALTA/TUDW/tree/main/2%20Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/3%20JS%20-%20TP5%20Programaci%C3%B3n%20Avanzada)
+    - [Trabajo Práctico Obligatorio](https://github.com/ELHACHESALTA/TUDW/tree/main/2%20Programaci%C3%B3n%20Est%C3%A1tica%20y%20Laboratorio%20Web/TP%20Obligatorio)
